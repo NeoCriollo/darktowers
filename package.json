@@ -1,0 +1,22 @@
+{
+  "name": "darktowers-the-path-of-ka",
+  "version": "0.1.0",
+  "description": "Tactile, gritty, single-player survival RPG simulation core optimized for Apple Silicon",
+  "type": "module",
+  "main": "core/gameLoop.ts",
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "demo": "node demo.ts",
+    "check": "tsc --noEmit"
+  },
+  "keywords": [
+    "game-engine",
+    "ballistics",
+    "tactile-inventory",
+    "diegetic-ui",
+    "survival-rpg",
+    "apple-silicon"
+  ],
+  "author": "The Path of Ka Core Team",
+  "license": "MIT"
+}
