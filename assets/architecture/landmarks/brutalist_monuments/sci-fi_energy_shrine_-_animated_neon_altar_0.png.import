@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://br2gfa4rukv6x"
+path.s3tc="res://.godot/imported/sci-fi_energy_shrine_-_animated_neon_altar_0.png-3ff621c361d377dcb6f92e8c36080ca6.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "d95168774bbfe194b790aa5f41ae115f"
+}
+
+[deps]
+
+source_file="res://assets/architecture/landmarks/brutalist_monuments/sci-fi_energy_shrine_-_animated_neon_altar_0.png"
+dest_files=["res://.godot/imported/sci-fi_energy_shrine_-_animated_neon_altar_0.png-3ff621c361d377dcb6f92e8c36080ca6.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

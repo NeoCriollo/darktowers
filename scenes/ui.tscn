@@ -1,0 +1,807 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_uigds"]
+[ext_resource type="PackedScene" path="res://scenes/map_modal.tscn" id="2_mapmodal"]
+[ext_resource type="Script" path="res://TacticalRadar2D.gd" id="3_radar"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_obsidian_panel"]
+content_margin_left = 12.0
+content_margin_top = 8.0
+content_margin_right = 12.0
+content_margin_bottom = 8.0
+bg_color = Color(0.0627, 0.051, 0.0392, 0.55)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.549, 0.427, 0.231, 0.65)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ka_badge"]
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+content_margin_bottom = 3.0
+bg_color = Color(0.0627, 0.051, 0.0392, 0.75)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.549, 0.427, 0.231, 0.85)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_header_strip"]
+content_margin_left = 12.0
+content_margin_top = 5.0
+content_margin_right = 16.0
+content_margin_bottom = 5.0
+bg_color = Color(0.0627, 0.051, 0.0392, 0.55)
+border_width_left = 0
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.549, 0.427, 0.231, 0.65)
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tile_idle"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0627, 0.051, 0.0392, 0.55)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.549, 0.427, 0.231, 0.35)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vitality_fill"]
+bg_color = Color(0.847, 0.608, 0.251, 0.95)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_respiration_fill"]
+bg_color = Color(0.957, 0.937, 0.902, 0.95)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bar_bg_dark"]
+bg_color = Color(0.0627, 0.051, 0.0392, 0.65)
+corner_radius_top_left = 1
+corner_radius_top_right = 1
+corner_radius_bottom_right = 1
+corner_radius_bottom_left = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_modal"]
+content_margin_left = 20.0
+content_margin_top = 16.0
+content_margin_right = 20.0
+content_margin_bottom = 16.0
+bg_color = Color(0.04, 0.035, 0.03, 0.94)
+border_width_left = 3
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.92, 0.72, 0.38, 0.52)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.6)
+shadow_size = 8
+shadow_offset = Vector2(0, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jam"]
+content_margin_left = 18.0
+content_margin_top = 10.0
+content_margin_right = 18.0
+content_margin_bottom = 10.0
+bg_color = Color(0.14, 0.03, 0.03, 0.92)
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.96, 0.28, 0.22, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_uigds")
+
+[node name="Root" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VignetteOverlay" type="ColorRect" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Crosshair" type="Control" parent="Root"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Dot" type="ColorRect" parent="Root/Crosshair"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.92, 0.9, 0.85, 0.65)
+
+[node name="UpperLeftBanner" type="MarginContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 420.0
+offset_bottom = 75.0
+mouse_filter = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/UpperLeftBanner"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="KaBadge" type="PanelContainer" parent="Root/UpperLeftBanner/HBoxContainer"]
+custom_minimum_size = Vector2(26, 32)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ka_badge")
+
+[node name="KaLabel" type="Label" parent="Root/UpperLeftBanner/HBoxContainer/KaBadge"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+modulate = Color(0.847, 0.608, 0.251, 1)
+text = "◇"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BannerVBox" type="VBoxContainer" parent="Root/UpperLeftBanner/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HeaderStrip" type="PanelContainer" parent="Root/UpperLeftBanner/HBoxContainer/BannerVBox"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_header_strip")
+
+[node name="RegionLabel" type="Label" parent="Root/UpperLeftBanner/HBoxContainer/BannerVBox/HeaderStrip"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "CUNA DE CALICHE"
+
+[node name="SubStateRow" type="HBoxContainer" parent="Root/UpperLeftBanner/HBoxContainer/BannerVBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SubStateLabel" type="Label" parent="Root/UpperLeftBanner/HBoxContainer/BannerVBox/SubStateRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+modulate = Color(0.847, 0.608, 0.251, 0.95)
+text = "Noche Fría del Desierto"
+
+[node name="CoordsSep" type="Label" parent="Root/UpperLeftBanner/HBoxContainer/BannerVBox/SubStateRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+modulate = Color(0.549, 0.427, 0.231, 0.8)
+text = "·"
+
+[node name="CoordsLabel" type="Label" parent="Root/UpperLeftBanner/HBoxContainer/BannerVBox/SubStateRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+modulate = Color(0.549, 0.427, 0.231, 0.85)
+text = "X: 0.0m | Z: -33.9m"
+
+[node name="TopLeftDebugPanel" type="MarginContainer" parent="Root"]
+visible = false
+layout_mode = 1
+anchors_preset = 0
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 20.0
+offset_top = 78.0
+offset_right = 420.0
+offset_bottom = 102.0
+mouse_filter = 2
+
+[node name="DebugText" type="Label" parent="Root/TopLeftDebugPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+modulate = Color(0.92, 0.72, 0.38, 0.72)
+theme_override_font_sizes/font_size = 10
+text = "FPS: 60 (16.7ms) | VRAM: 0.0MB | PRIMS: 0k"
+autowrap_mode = 0
+
+[node name="TopCenterInstrumentBar" type="MarginContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -210.0
+offset_top = 16.0
+offset_right = 210.0
+offset_bottom = 72.0
+grow_horizontal = 2
+mouse_filter = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Root/TopCenterInstrumentBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="VitalsHeaderRow" type="HBoxContainer" parent="Root/TopCenterInstrumentBar/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VitalityLabel" type="Label" parent="Root/TopCenterInstrumentBar/VBoxContainer/VitalsHeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "ILESO 100/100"
+
+[node name="RespirationLabel" type="Label" parent="Root/TopCenterInstrumentBar/VBoxContainer/VitalsHeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "100%"
+horizontal_alignment = 2
+
+[node name="VitalityGauge" type="ProgressBar" parent="Root/TopCenterInstrumentBar/VBoxContainer"]
+custom_minimum_size = Vector2(420, 6)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg_dark")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vitality_fill")
+value = 100.0
+show_percentage = false
+
+[node name="RespirationGauge" type="ProgressBar" parent="Root/TopCenterInstrumentBar/VBoxContainer"]
+custom_minimum_size = Vector2(420, 3)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg_dark")
+theme_override_styles/fill = SubResource("StyleBoxFlat_respiration_fill")
+value = 100.0
+show_percentage = false
+
+[node name="HazardTagLabel" type="Label" parent="Root/TopCenterInstrumentBar/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "◇  ⬡ Sílice en Suspensión: 2.0 mg/m³"
+horizontal_alignment = 1
+
+[node name="PostureTag" type="Label" parent="Root/TopCenterInstrumentBar/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 11
+modulate = Color(0.88, 0.80, 0.65, 0.95)
+text = "[ EN REPOSO ]"
+horizontal_alignment = 1
+
+[node name="RegionHeader" type="Label" parent="Root/TopCenterInstrumentBar/VBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+modulate = Color(0.96, 0.84, 0.58, 1)
+theme_override_font_sizes/font_size = 13
+text = "REGIÓN: CUNA DE CALICHE | COORD: X: 0.0 m, Z: -33.9 m
+SÍLICE EN SUSPENSIÓN: 2.0 mg/m³ | NOCHE FRÍA DEL DESIERTO"
+horizontal_alignment = 1
+
+[node name="TopRightMinimapPanel" type="MarginContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = -180.0
+offset_top = 12.0
+offset_right = -12.0
+offset_bottom = 180.0
+grow_horizontal = 0
+mouse_filter = 2
+
+[node name="TacticalRadar2D" type="Control" parent="Root/TopRightMinimapPanel"]
+custom_minimum_size = Vector2(160, 160)
+layout_mode = 2
+mouse_filter = 2
+script = ExtResource("3_radar")
+
+[node name="MidLeftConditionStack" type="MarginContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -220.0
+offset_right = 260.0
+offset_bottom = -118.0
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="ConditionVBox" type="VBoxContainer" parent="Root/MidLeftConditionStack"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="BottomLeftWeaponConsole" type="PanelContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 2
+anchor_left = 0.0
+anchor_top = 1.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = -108.0
+offset_right = 530.0
+offset_bottom = -16.0
+grow_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_obsidian_panel")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Root/BottomLeftWeaponConsole"]
+layout_mode = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="CylinderDiamondControl" type="Control" parent="Root/BottomLeftWeaponConsole/HBoxContainer"]
+custom_minimum_size = Vector2(76, 76)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ActionTilesRow" type="HBoxContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="TileCock" type="PanelContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow"]
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tile_idle")
+
+[node name="VBox" type="VBoxContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileCock"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="KeyLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileCock/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+modulate = Color(0.847, 0.608, 0.251, 1)
+text = "[F]"
+horizontal_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileCock/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "Montar"
+horizontal_alignment = 1
+
+[node name="TileLoad" type="PanelContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow"]
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tile_idle")
+
+[node name="VBox" type="VBoxContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileLoad"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="KeyLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileLoad/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+modulate = Color(0.847, 0.608, 0.251, 1)
+text = "[R]"
+horizontal_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileLoad/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "Cargar"
+horizontal_alignment = 1
+
+[node name="TileClear" type="PanelContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow"]
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tile_idle")
+
+[node name="VBox" type="VBoxContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileClear"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="KeyLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileClear/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+modulate = Color(0.847, 0.608, 0.251, 1)
+text = "[V]"
+horizontal_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileClear/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "Desencasq."
+horizontal_alignment = 1
+
+[node name="TileClean" type="PanelContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow"]
+custom_minimum_size = Vector2(46, 46)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_tile_idle")
+
+[node name="VBox" type="VBoxContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileClean"]
+layout_mode = 2
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="KeyLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileClean/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+modulate = Color(0.847, 0.608, 0.251, 1)
+text = "[B]"
+horizontal_alignment = 1
+
+[node name="ActionLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/ActionTilesRow/TileClean/VBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 9
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "Limpiar"
+horizontal_alignment = 1
+
+[node name="AmmoStanceBlock" type="VBoxContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 3
+alignment = 1
+
+[node name="ToleranceBar" type="ProgressBar" parent="Root/BottomLeftWeaponConsole/HBoxContainer/AmmoStanceBlock"]
+custom_minimum_size = Vector2(160, 3)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/background = SubResource("StyleBoxFlat_bar_bg_dark")
+theme_override_styles/fill = SubResource("StyleBoxFlat_vitality_fill")
+show_percentage = false
+
+[node name="AmmoRow" type="HBoxContainer" parent="Root/BottomLeftWeaponConsole/HBoxContainer/AmmoStanceBlock"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LiveRoundCount" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/AmmoStanceBlock/AmmoRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 28
+modulate = Color(0.957, 0.937, 0.902, 1)
+text = "6"
+
+[node name="ReserveAmmoCount" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/AmmoStanceBlock/AmmoRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+modulate = Color(0.847, 0.608, 0.251, 0.95)
+text = "/ 36"
+vertical_alignment = 2
+
+[node name="CylinderIndicator" type="Control" parent="Root/BottomLeftWeaponConsole/HBoxContainer/AmmoStanceBlock/AmmoRow"]
+custom_minimum_size = Vector2(34, 34)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="CaliberLabel" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/AmmoStanceBlock/AmmoRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+modulate = Color(0.549, 0.427, 0.231, 1)
+text = ".45 COLT"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="StatusTag" type="Label" parent="Root/BottomLeftWeaponConsole/HBoxContainer/AmmoStanceBlock"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+modulate = Color(0.957, 0.937, 0.902, 0.95)
+text = "MONTADO | DER ► | [H] Enfundar"
+
+[node name="NotificationBanner" type="PanelContainer" parent="Root"]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_top = 0.0
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -280.0
+offset_top = 116.0
+offset_right = 280.0
+offset_bottom = 168.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_obsidian_panel")
+
+[node name="NotificationLabel" type="Label" parent="Root/NotificationBanner"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 14
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="BottomCenter" type="MarginContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -260.0
+offset_top = -140.0
+offset_right = 260.0
+offset_bottom = -80.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="JamBanner" type="PanelContainer" parent="Root/BottomCenter"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_jam")
+
+[node name="JamBannerLabel" type="Label" parent="Root/BottomCenter/JamBanner"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 13
+text = "FALLA MECÁNICA: ENCASQUILLADO
+PULSA [V] PARA EJECUTAR RUTINA DE DESPEJE"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="CenterModal" type="CenterContainer" parent="Root"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="InspectionModal" type="PanelContainer" parent="Root/CenterModal"]
+visible = false
+custom_minimum_size = Vector2(460, 250)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="VBox" type="VBoxContainer" parent="Root/CenterModal/InspectionModal"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="InspectionTitle" type="Label" parent="Root/CenterModal/InspectionModal/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 15
+text = "=== INSPECCIÓN TÁCTIL DE ARMA ==="
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="InspectionBody" type="Label" parent="Root/CenterModal/InspectionModal/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 13
+text = "Inspeccionando armazón y recámara..."
+autowrap_mode = 3
+
+[node name="SettingsModal" type="PanelContainer" parent="Root/CenterModal"]
+visible = false
+custom_minimum_size = Vector2(540, 420)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_modal")
+
+[node name="Margin" type="MarginContainer" parent="Root/CenterModal/SettingsModal"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="Root/CenterModal/SettingsModal/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="HeaderRow" type="HBoxContainer" parent="Root/CenterModal/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ModalTitle" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.94, 0.72, 0.34, 1)
+theme_override_font_sizes/font_size = 15
+text = "=== AJUSTES Y CALIBRACIÓN TÁCTICA ==="
+autowrap_mode = 3
+
+[node name="BtnCloseSettings" type="Button" parent="Root/CenterModal/SettingsModal/Margin/VBox/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[ ESC / CERRAR ]"
+
+[node name="LanguageRow" type="HBoxContainer" parent="Root/CenterModal/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox/LanguageRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "LANGUAGE / IDIOMA:"
+
+[node name="LanguageOption" type="OptionButton" parent="Root/CenterModal/SettingsModal/Margin/VBox/LanguageRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 13
+selected = 0
+item_count = 2
+popup/item_0/text = "ENGLISH (EN)"
+popup/item_0/id = 0
+popup/item_1/text = "ESPAÑOL (ES)"
+popup/item_1/id = 1
+
+[node name="BtnCycleLanguage" type="Button" parent="Root/CenterModal/SettingsModal/Margin/VBox/LanguageRow"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[ EN ]"
+
+[node name="MasterVolRow" type="HBoxContainer" parent="Root/CenterModal/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox/MasterVolRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "GANANCIA MAESTRA:"
+
+[node name="MasterVolSlider" type="HSlider" parent="Root/CenterModal/SettingsModal/Margin/VBox/MasterVolRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 85.0
+
+[node name="MasterVolValue" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox/MasterVolRow"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "85%"
+horizontal_alignment = 2
+
+[node name="WindVolRow" type="HBoxContainer" parent="Root/CenterModal/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox/WindVolRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "ZUMBIDO DEL VIENTO:"
+
+[node name="WindVolSlider" type="HSlider" parent="Root/CenterModal/SettingsModal/Margin/VBox/WindVolRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 75.0
+
+[node name="WindVolValue" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox/WindVolRow"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "75%"
+horizontal_alignment = 2
+
+[node name="GraphicsRow" type="HBoxContainer" parent="Root/CenterModal/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="TaaCheck" type="CheckButton" parent="Root/CenterModal/SettingsModal/Margin/VBox/GraphicsRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+button_pressed = true
+text = "ANTIALIASING TEMPORAL (TAA)"
+
+[node name="FogCheck" type="CheckButton" parent="Root/CenterModal/SettingsModal/Margin/VBox/GraphicsRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+button_pressed = true
+text = "NIEBLA VOLUMÉTRICA DE POLVO"
+
+[node name="ControlsHeader" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.92, 0.68, 0.32, 0.92)
+theme_override_font_sizes/font_size = 13
+text = "CONTROLES DIEGÉTICOS Y DE SUPERVIVENCIA:"
+autowrap_mode = 3
+
+[node name="ControlsBody" type="Label" parent="Root/CenterModal/SettingsModal/Margin/VBox"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.78, 0.74, 0.66, 0.9)
+theme_override_font_sizes/font_size = 12
+text = "[WASD] Mover   | [SHIFT] Sprint    | [CTRL / C] Agacharse | [SPACE] Saltar
+[LMB]  Fuego   | [RMB]   Apuntar   | [F] Amartillar       | [R] Recargar bala
+[V] Despejar   | [B] Limpieza      | [H] Enfundar         | [I] Inspeccionar | [M/TAB] Mapa"
+autowrap_mode = 3
+
+[node name="MapModal" parent="." instance=ExtResource("2_mapmodal")]
+visible = false

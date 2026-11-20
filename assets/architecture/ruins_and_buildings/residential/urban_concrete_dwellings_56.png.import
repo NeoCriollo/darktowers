@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dmssthqhmeuix"
+path.s3tc="res://.godot/imported/urban_concrete_dwellings_56.png-aa6c4e580833347617c1d5a0bae0690e.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "e67a6edd7fb9b9b9dbf23c857f9f8f4f"
+}
+
+[deps]
+
+source_file="res://assets/architecture/ruins_and_buildings/residential/urban_concrete_dwellings_56.png"
+dest_files=["res://.godot/imported/urban_concrete_dwellings_56.png-aa6c4e580833347617c1d5a0bae0690e.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/architecture/ruins_and_buildings/residential/urban_concrete_dwellings_56.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

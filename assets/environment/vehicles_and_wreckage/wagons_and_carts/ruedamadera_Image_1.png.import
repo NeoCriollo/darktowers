@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://mov52sv5wu2h"
+path.s3tc="res://.godot/imported/ruedamadera_Image_1.png-7dffe119adf95b8d552e851e94b96f08.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "9d2d2553570e241c3495862e0d26b37f"
+}
+
+[deps]
+
+source_file="res://assets/environment/vehicles_and_wreckage/wagons_and_carts/ruedamadera_Image_1.png"
+dest_files=["res://.godot/imported/ruedamadera_Image_1.png-7dffe119adf95b8d552e851e94b96f08.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

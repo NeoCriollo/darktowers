@@ -1,0 +1,298 @@
+[gd_scene load_steps=28 format=3 uid="uid://bsccl2udpwfi0"]
+
+[ext_resource type="Script" path="res://world.gd" id="1_world"]
+[ext_resource type="Script" path="res://world_environment.gd" id="2_env"]
+[ext_resource type="PackedScene" uid="uid://c6f2a7ya8pqe1" path="res://scenes/player.tscn" id="3_player"]
+[ext_resource type="PackedScene" path="res://scenes/ui.tscn" id="4_ui"]
+[ext_resource type="Shader" path="res://shaders/wasteland_terrain.gdshader" id="5_shader"]
+[ext_resource type="Script" path="res://prop_scatter.gd" id="6_scatter"]
+[ext_resource type="Script" path="res://world_manager.gd" id="7_wmanager"]
+[ext_resource type="Texture2D" uid="uid://c3f4scw875n5h" path="res://assets/textures/ground/mat.018_baseColor.jpg" id="8_albedo"]
+[ext_resource type="Texture2D" uid="uid://cnffpker8intk" path="res://assets/textures/ground/mat.018_normal.jpg" id="9_normal"]
+[ext_resource type="Texture2D" uid="uid://dt7jckyhtcchj" path="res://assets/textures/ground/mat.018_occlusion.png" id="10_roughness"]
+[ext_resource type="Texture2D" uid="uid://bin8a6qnh3j0v" path="res://assets/environment/geology_and_rocks/megascan_formations/rock_formation_modddif_image_0.png" id="11_cliff_albedo"]
+[ext_resource type="Texture2D" uid="uid://c1b0ca2wy154l" path="res://assets/environment/geology_and_rocks/megascan_formations/rock_formation_modddif_image_1.png" id="12_cliff_normal"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_p1mnv"]
+sky_top_color = Color(0.36, 0.38, 0.42, 1)
+sky_horizon_color = Color(0.88, 0.54, 0.28, 1)
+sky_curve = 0.12
+ground_bottom_color = Color(0.2, 0.17, 0.14, 1)
+ground_horizon_color = Color(0.68, 0.42, 0.24, 1)
+ground_curve = 0.06
+sun_angle_max = 3.5
+sun_curve = 0.22
+
+[sub_resource type="Sky" id="Sky_k31ts"]
+sky_material = SubResource("ProceduralSkyMaterial_p1mnv")
+
+[sub_resource type="Environment" id="Environment_606yq"]
+background_mode = 2
+sky = SubResource("Sky_k31ts")
+ambient_light_source = 3
+ambient_light_color = Color(0.38, 0.42, 0.5, 1)
+ambient_light_sky_contribution = 0.35
+ambient_light_energy = 0.65
+tonemap_mode = 2
+tonemap_exposure = 1.18
+tonemap_white = 1.45
+ssr_enabled = true
+ssao_enabled = true
+ssao_radius = 1.35
+ssao_intensity = 2.2
+ssao_power = 1.8
+ssao_sharpness = 0.96
+ssil_sharpness = 0.9
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+glow_enabled = true
+glow_levels/2 = 0.85
+glow_levels/3 = 0.55
+glow_levels/4 = 0.35
+glow_levels/6 = 0.12
+glow_intensity = 0.45
+glow_bloom = 0.12
+fog_enabled = true
+fog_light_color = Color(0.72, 0.48, 0.32, 1)
+fog_density = 0.012
+fog_aerial_perspective = 0.75
+fog_sky_affect = 0.45
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.02
+volumetric_fog_albedo = Color(0.72, 0.48, 0.32, 1)
+volumetric_fog_emission = Color(0.08, 0.04, 0.02, 1)
+volumetric_fog_anisotropy = 0.35
+volumetric_fog_length = 85.0
+volumetric_fog_ambient_inject = 0.15
+adjustment_enabled = true
+adjustment_brightness = 1.02
+adjustment_contrast = 1.14
+adjustment_saturation = 0.78
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_terrain"]
+render_priority = 0
+shader = ExtResource("5_shader")
+shader_parameter/displacement_scale = 2.5
+shader_parameter/dune_scale = 0.008
+shader_parameter/gravel_scale = 0.024
+shader_parameter/micro_scale = 0.14
+shader_parameter/wind_direction = 3.93
+shader_parameter/yardang_scale = 0.012
+shader_parameter/yardang_strength = 0.65
+shader_parameter/playa_flatten = 0.55
+shader_parameter/alkali_albedo = Color(0.78, 0.73, 0.65, 1)
+shader_parameter/salt_crust_albedo = Color(0.9, 0.88, 0.83, 1)
+shader_parameter/alkali_roughness = 0.92
+shader_parameter/alkali_crack_scale = 0.55
+shader_parameter/alkali_crack_depth = 0.42
+shader_parameter/detail_tile_macro = 0.15
+shader_parameter/detail_tile_micro = 3.0
+shader_parameter/detail_normal_depth = 1.0
+shader_parameter/silica_dust_blend = 0.0
+shader_parameter/gravel_albedo = Color(0.34, 0.3, 0.26, 1)
+shader_parameter/gravel_roughness = 0.97
+shader_parameter/gravel_bump_strength = 1.6
+shader_parameter/dune_albedo = Color(0.62, 0.52, 0.36, 1)
+shader_parameter/dune_roughness = 0.55
+shader_parameter/dune_sparkle = 0.04
+shader_parameter/cliff_tile_macro = 0.035
+shader_parameter/cliff_tile_micro = 0.22
+shader_parameter/cliff_blend_sharpness = 4.0
+shader_parameter/strata_albedo_a = Color(0.46, 0.34, 0.27, 1)
+shader_parameter/strata_albedo_b = Color(0.26, 0.23, 0.21, 1)
+shader_parameter/strata_roughness = 0.92
+shader_parameter/strata_frequency = 2.8
+shader_parameter/blend_sharpness = 5.0
+shader_parameter/wind_tint = Color(0.58, 0.52, 0.44, 1)
+shader_parameter/wind_tint_strength = 0.18
+shader_parameter/texture_gravel_albedo = ExtResource("8_albedo")
+shader_parameter/texture_gravel_normal = ExtResource("9_normal")
+shader_parameter/texture_gravel_roughness = ExtResource("10_roughness")
+shader_parameter/texture_cliff_albedo = ExtResource("11_cliff_albedo")
+shader_parameter/texture_cliff_normal = ExtResource("12_cliff_normal")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_terrain"]
+material = SubResource("ShaderMaterial_terrain")
+size = Vector2(2500, 2500)
+subdivide_width = 128
+subdivide_depth = 128
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ground"]
+size = Vector3(2500, 2, 2500)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wall_x"]
+size = Vector3(8, 60, 2502)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wall_z"]
+size = Vector3(2502, 60, 8)
+
+[sub_resource type="ParticleProcessMaterial" id="PPM_drift"]
+lifetime_randomness = 0.45
+emission_shape = 3
+emission_box_extents = Vector3(45, 8, 45)
+direction = Vector3(-0.707, 0, -0.707)
+spread = 18.0
+initial_velocity_min = 0.5
+initial_velocity_max = 1.2
+gravity = Vector3(0, -0.4, 0)
+damping_min = 0.04
+damping_max = 0.08
+color = Color(0.64, 0.58, 0.49, 0.85)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dust_particle"]
+transparency = 1
+shading_mode = 2
+vertex_color_use_as_albedo = true
+roughness = 0.95
+billboard_mode = 3
+billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_drift"]
+material = SubResource("StandardMaterial3D_dust_particle")
+size = Vector2(0.08, 0.08)
+
+[sub_resource type="ParticleProcessMaterial" id="PPM_stream"]
+lifetime_randomness = 0.3
+emission_shape = 3
+emission_box_extents = Vector3(55, 10, 55)
+direction = Vector3(-0.707, 0, -0.707)
+spread = 22.0
+initial_velocity_min = 1.8
+initial_velocity_max = 4.2
+gravity = Vector3(0, -0.4, 0)
+damping_min = 0.12
+damping_max = 0.22
+color = Color(0.6, 0.52, 0.42, 0.55)
+
+[sub_resource type="QuadMesh" id="QuadMesh_stream"]
+material = SubResource("StandardMaterial3D_dust_particle")
+size = Vector2(0.22, 0.06)
+
+[sub_resource type="ParticleProcessMaterial" id="PPM_haboob"]
+lifetime_randomness = 0.6
+emission_shape = 3
+emission_box_extents = Vector3(75, 22, 75)
+direction = Vector3(0.695, 0.18, 0.719)
+spread = 55.0
+initial_velocity_min = 5.0
+initial_velocity_max = 14.0
+gravity = Vector3(0, 0.8, 0)
+damping_min = 0.02
+damping_max = 0.06
+color = Color(0.52, 0.38, 0.28, 0.35)
+
+[sub_resource type="QuadMesh" id="QuadMesh_haboob"]
+material = SubResource("StandardMaterial3D_dust_particle")
+size = Vector2(1.6, 1.2)
+
+[node name="World" type="Node3D" node_paths=PackedStringArray("environment_node", "sun_light", "terrain_mesh", "player", "hud", "prop_scatter")]
+script = ExtResource("1_world")
+environment_node = NodePath("WorldEnvironment")
+sun_light = NodePath("DirectionalLight3D")
+terrain_mesh = NodePath("DesertTerrain")
+player = NodePath("Player")
+hud = NodePath("HUD")
+prop_scatter = NodePath("PropScatter")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." node_paths=PackedStringArray("sun_node", "particles_root")]
+environment = SubResource("Environment_606yq")
+script = ExtResource("2_env")
+sky_top_color = Color(0.36, 0.38, 0.42, 1)
+sky_horizon_color = Color(0.68, 0.62, 0.53, 1)
+ground_bottom_color = Color(0.2, 0.17, 0.14, 1)
+ground_horizon_color = Color(0.56, 0.5, 0.42, 1)
+volumetric_anisotropy = 0.35
+sun_node = NodePath("../DirectionalLight3D")
+saturation = 0.78
+contrast = 1.14
+particles_root = NodePath("../WastelandParticles")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.669131, -0.179783, 0.721071, 0, 0.970296, 0.241922, -0.743145, -0.161877, 0.649255, 0, 10, 0)
+light_color = Color(1, 0.78, 0.52, 1)
+light_energy = 1.95
+light_volumetric_fog_energy = 1.6
+shadow_enabled = true
+shadow_bias = 0.05
+shadow_normal_bias = 1.5
+shadow_blur = 1.2
+directional_shadow_split_1 = 0.07
+directional_shadow_split_2 = 0.22
+directional_shadow_split_3 = 0.48
+directional_shadow_blend_splits = true
+directional_shadow_max_distance = 180.0
+
+[node name="DesertTerrain" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_terrain")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="DesertTerrain"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DesertTerrain/StaticBody3D"]
+transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="FallbackAbyssFloor" type="CollisionShape3D" parent="DesertTerrain/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -45, 0)
+shape = SubResource("BoxShape3D_ground")
+
+[node name="PerimeterBarrierWalls" type="StaticBody3D" parent="."]
+
+[node name="WallEast_PosX" type="CollisionShape3D" parent="PerimeterBarrierWalls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1246, 25, 0)
+shape = SubResource("BoxShape3D_wall_x")
+
+[node name="WallWest_NegX" type="CollisionShape3D" parent="PerimeterBarrierWalls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1246, 25, 0)
+shape = SubResource("BoxShape3D_wall_x")
+
+[node name="WallSouth_PosZ" type="CollisionShape3D" parent="PerimeterBarrierWalls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, 1246)
+shape = SubResource("BoxShape3D_wall_z")
+
+[node name="WallNorth_NegZ" type="CollisionShape3D" parent="PerimeterBarrierWalls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25, -1246)
+shape = SubResource("BoxShape3D_wall_z")
+
+[node name="WastelandParticles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 0)
+
+[node name="SilicaDrift" type="GPUParticles3D" parent="WastelandParticles"]
+amount = 300
+lifetime = 18.0
+visibility_aabb = AABB(-160, -4, -160, 320, 18, 320)
+process_material = SubResource("PPM_drift")
+draw_pass_1 = SubResource("QuadMesh_drift")
+
+[node name="GritStream" type="GPUParticles3D" parent="WastelandParticles"]
+emitting = false
+amount = 600
+lifetime = 8.0
+visibility_aabb = AABB(-200, -2, -200, 400, 12, 400)
+process_material = SubResource("PPM_stream")
+draw_pass_1 = SubResource("QuadMesh_stream")
+
+[node name="HaboobWall" type="GPUParticles3D" parent="WastelandParticles"]
+emitting = false
+amount = 1200
+lifetime = 30.0
+visibility_aabb = AABB(-1250, -2, -1250, 2500, 60, 2500)
+process_material = SubResource("PPM_haboob")
+draw_pass_1 = SubResource("QuadMesh_haboob")
+
+[node name="PropScatter" type="Node3D" parent="."]
+script = ExtResource("6_scatter")
+player_clearance = 22.0
+
+[node name="WorldManager" type="Node3D" parent="." node_paths=PackedStringArray("player_target", "prop_scatter_node", "terrain_source", "environment_node")]
+script = ExtResource("7_wmanager")
+player_target = NodePath("../Player")
+prop_scatter_node = NodePath("../PropScatter")
+terrain_source = NodePath("../DesertTerrain")
+environment_node = NodePath("../WorldEnvironment")
+
+[node name="Player" parent="." instance=ExtResource("3_player")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1020, 0.05, -820)
+
+[node name="HUD" parent="." instance=ExtResource("4_ui")]

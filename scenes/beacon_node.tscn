@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1g8p9b45n80m"]
+
+[ext_resource type="Script" path="res://beacon_node.gd" id="1_beacon"]
+
+[node name="BeaconNode" type="Node3D" groups=["beacon_nodes"]]
+script = ExtResource("1_beacon")
+

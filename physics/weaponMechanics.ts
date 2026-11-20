@@ -99,6 +99,9 @@ export class WeaponMechanics {
    */
   public computeJamProbability(): number {
     const d = this.getCompositeDegradation();
+    if (d <= 0.0) {
+      return 0.0;
+    }
     const threshold = ENGINE_CONFIG.JAM_DEGRADATION_THRESHOLD;
     const k = ENGINE_CONFIG.JAM_LOGISTIC_STEEPNESS;
     return 1.0 / (1.0 + Math.exp(-k * (d - threshold)));
@@ -117,6 +120,18 @@ export class WeaponMechanics {
     // High grit rapidly degrades active oil lubrication
     if (addedGrit > 0) {
       this.lubricationQuality = Math.max(0.0, this.lubricationQuality - addedGrit * 0.4);
+    }
+  }
+
+  /**
+   * Applies salt-corrosion accumulation from saline/alkali playa environments (e.g. Dead-Creek Salt Flats).
+   */
+  public exposeToSaltCorrosion(dtSeconds: number, corrosionRateMultiplier: number = 1.0): void {
+    const protection = this.isHolstered ? ENGINE_CONFIG.HOLSTER_PROTECTION_FACTOR : 0.0;
+    const addedCorrosion = (1.0 - protection) * dtSeconds * 0.005 * corrosionRateMultiplier;
+    this.corrosionIndex = Math.min(1.0, this.corrosionIndex + addedCorrosion);
+    if (addedCorrosion > 0) {
+      this.lubricationQuality = Math.max(0.0, this.lubricationQuality - addedCorrosion * 0.8);
     }
   }
 

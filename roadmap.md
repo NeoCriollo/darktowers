@@ -115,3 +115,4 @@ flowchart LR
 ### Sprint 3 (The Vertical Slice Scenario)
 - *Scenario:* Player navigates from abandoned waystation through a gathering dust storm to recover a lost cache.
 - *Test:* Weapon exposed to sandstorm jams during confrontation; player clears stovepipe, retreats to mount, accesses saddlebag cleaning kit, applies solvent and bore cloth, and re-engages.
+

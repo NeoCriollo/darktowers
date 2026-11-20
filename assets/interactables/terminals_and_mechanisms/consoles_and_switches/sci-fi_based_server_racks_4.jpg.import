@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://608eagpls26o"
+path.s3tc="res://.godot/imported/sci-fi_based_server_racks_4.jpg-ee56b3af206fe39b78f3907c95261c76.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "1f4db8bdb69370107c3c7d1d8cfe404f"
+}
+
+[deps]
+
+source_file="res://assets/interactables/terminals_and_mechanisms/consoles_and_switches/sci-fi_based_server_racks_4.jpg"
+dest_files=["res://.godot/imported/sci-fi_based_server_racks_4.jpg-ee56b3af206fe39b78f3907c95261c76.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

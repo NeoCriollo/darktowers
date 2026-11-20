@@ -1,0 +1,271 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://map_modal.gd" id="1_mapgd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_map_modal"]
+content_margin_left = 20.0
+content_margin_top = 16.0
+content_margin_right = 20.0
+content_margin_bottom = 16.0
+bg_color = Color(0.04, 0.035, 0.03, 0.95)
+border_width_left = 3
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.92, 0.72, 0.38, 0.4)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_color = Color(0, 0, 0, 0.68)
+shadow_size = 12
+shadow_offset = Vector2(0, 4)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cartographic_frame"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.028, 0.025, 0.022, 0.98)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.92, 0.72, 0.38, 0.45)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sidebar"]
+content_margin_left = 12.0
+content_margin_top = 10.0
+content_margin_right = 12.0
+content_margin_bottom = 10.0
+bg_color = Color(0.032, 0.028, 0.024, 0.92)
+border_width_left = 2
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.92, 0.72, 0.38, 0.32)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_btn"]
+content_margin_left = 10.0
+content_margin_top = 4.0
+content_margin_right = 10.0
+content_margin_bottom = 4.0
+bg_color = Color(0.08, 0.068, 0.055, 0.92)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.92, 0.72, 0.38, 0.42)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="MapModal" type="PanelContainer"]
+visible = false
+custom_minimum_size = Vector2(960, 580)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -480.0
+offset_top = -290.0
+offset_right = 480.0
+offset_bottom = 290.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_map_modal")
+script = ExtResource("1_mapgd")
+
+[node name="Margin" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 4
+
+[node name="RootVBox" type="VBoxContainer" parent="Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="HeaderRow" type="HBoxContainer" parent="Margin/RootVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="TitleVBox" type="VBoxContainer" parent="Margin/RootVBox/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 2
+
+[node name="ModalTitle" type="Label" parent="Margin/RootVBox/HeaderRow/TitleVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98, 0.84, 0.48, 1)
+theme_override_font_sizes/font_size = 16
+text = "=== TACTICAL RECONNAISSANCE CHART — THE PATH OF KA ==="
+
+[node name="ModalSubtitle" type="Label" parent="Margin/RootVBox/HeaderRow/TitleVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.78, 0.72, 0.62, 0.88)
+theme_override_font_sizes/font_size = 11
+text = "SURVEY SECTOR: 500m × 500m ALKALI BASIN  |  PROJECTION: TOPOGRAPHIC ORTHO"
+
+[node name="HeaderButtons" type="HBoxContainer" parent="Margin/RootVBox/HeaderRow"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnCenter" type="Button" parent="Margin/RootVBox/HeaderRow/HeaderButtons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.72, 0.38, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+text = "[ C / CENTER ON GUNSLINGER ]"
+
+[node name="BtnResetZoom" type="Button" parent="Margin/RootVBox/HeaderRow/HeaderButtons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.72, 0.38, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+text = "[ Z / 1.0x ]"
+
+[node name="BtnCloseMap" type="Button" parent="Margin/RootVBox/HeaderRow/HeaderButtons"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.72, 0.38, 1)
+theme_override_font_sizes/font_size = 11
+theme_override_styles/normal = SubResource("StyleBoxFlat_btn")
+text = "[ M / TAB / ESC ]"
+
+[node name="BodyHBox" type="HBoxContainer" parent="Margin/RootVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="CartographicFrame" type="PanelContainer" parent="Margin/RootVBox/BodyHBox"]
+custom_minimum_size = Vector2(580, 440)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_cartographic_frame")
+
+[node name="CartographicCanvas" type="Control" parent="Margin/RootVBox/BodyHBox/CartographicFrame"]
+clip_contents = true
+custom_minimum_size = Vector2(580, 440)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 0
+
+[node name="TacticalSidebar" type="PanelContainer" parent="Margin/RootVBox/BodyHBox"]
+custom_minimum_size = Vector2(320, 440)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_sidebar")
+
+[node name="SidebarVBox" type="VBoxContainer" parent="Margin/RootVBox/BodyHBox/TacticalSidebar"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="LegendHeader" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.72, 0.38, 1)
+theme_override_font_sizes/font_size = 12
+text = "CARTOGRAPHIC LEGEND & TELEMETRY"
+
+[node name="TelemetryPosLabel" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.94, 0.84, 0.62, 0.96)
+theme_override_font_sizes/font_size = 11
+text = "POS: X +000 m | Z +000 m   ||   HDG: 000° N"
+autowrap_mode = 3
+
+[node name="TelemetryBeaconLabel" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.56, 0.34, 0.96)
+theme_override_font_sizes/font_size = 11
+text = "KA BEACON: 235 m (045° NE)   ||   ZOOM: 1.0x"
+autowrap_mode = 3
+
+[node name="TelemetryCursorLabel" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.76, 0.72, 0.64, 0.9)
+theme_override_font_sizes/font_size = 11
+text = "GRID: [C3]  X +000 m, Z +000 m  |  ELEV: +0.0 m"
+autowrap_mode = 3
+
+[node name="LegendItemsVBox" type="VBoxContainer" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Sep1" type="HSeparator" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+modulate = Color(0.92, 0.72, 0.38, 0.35)
+layout_mode = 2
+
+[node name="PoiHeader" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.72, 0.38, 1)
+theme_override_font_sizes/font_size = 12
+text = "REGIONAL POINTS OF INTEREST"
+
+[node name="PoiScroll" type="ScrollContainer" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="PoiListVBox" type="VBoxContainer" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox/PoiScroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Sep2" type="HSeparator" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+modulate = Color(0.92, 0.72, 0.38, 0.35)
+layout_mode = 2
+
+[node name="SelectedPoiInspector" type="VBoxContainer" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox"]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="SelectedPoiTitle" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox/SelectedPoiInspector"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.98, 0.84, 0.48, 1)
+theme_override_font_sizes/font_size = 12
+text = "THE DARK TOWER / KA BEACON"
+autowrap_mode = 3
+
+[node name="SelectedPoiCoords" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox/SelectedPoiInspector"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.84, 0.78, 0.66, 0.92)
+theme_override_font_sizes/font_size = 11
+text = "X +167 m | Z +165 m  (235 m)"
+autowrap_mode = 3
+
+[node name="SelectedPoiStatus" type="Label" parent="Margin/RootVBox/BodyHBox/TacticalSidebar/SidebarVBox/SelectedPoiInspector"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.68, 0.84, 0.72, 0.92)
+theme_override_font_sizes/font_size = 11
+text = "PERMANENT ZENITH LANDMARK"
+autowrap_mode = 3
+
+[node name="FooterHintsLabel" type="Label" parent="Margin/RootVBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.82, 0.76, 0.64, 0.88)
+theme_override_font_sizes/font_size = 11
+text = "[LMB DRAG] Pan Chart   |   [WHEEL] Zoom (0.6x–3.0x)   |   [CLICK POI] Inspect   |   [M / TAB] Stow Chart"
+horizontal_alignment = 1
+autowrap_mode = 3
+

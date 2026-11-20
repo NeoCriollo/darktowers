@@ -41,3 +41,26 @@ export const ENGINE_CONFIG = {
   TARGET_ARCH: 'arm64',
   ENABLE_TYPED_ARRAYS: true,
 } as const;
+
+export const WORLD_CONFIG = {
+  // Global 2500m × 2500m Macro-Footprint
+  TOTAL_MAP_FOOTPRINT_M: 2500.0,
+  HALF_EXTENT_M: 1250.0,
+  BOUNDS_MIN_X: -1250.0,
+  BOUNDS_MAX_X: 1250.0,
+  BOUNDS_MIN_Z: -1250.0,
+  BOUNDS_MAX_Z: 1250.0,
+
+  // Perimeter Barrier Colliders
+  PERIMETER_COLLIDER_OFFSET_M: 1246.0,
+  PERIMETER_COLLIDER_HEIGHT_M: 60.0,
+
+  // Axis of the Beam: 0.785 rad (~45° NE) from (0, 0) through (+650, +650) to (+700, +700)
+  AXIS_OF_THE_BEAM_RAD: 0.785,
+  DARK_TOWER_POSITION: vec3(700.0, 0.0, 700.0),
+  DARK_TOWER_HEIGHT_M: 120.0,
+
+  // Initial Player Spawn: Waystation Mohaine Way-Bunker
+  INITIAL_PLAYER_SPAWN: vec3(-1020.0, 0.0, -820.0),
+} as const;
+

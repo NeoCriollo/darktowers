@@ -1,0 +1,914 @@
+[gd_scene load_steps=27 format=3 uid="uid://b8mainmenuka1"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_mmenu"]
+[ext_resource type="Shader" path="res://shaders/wasteland_terrain.gdshader" id="2_tshader"]
+[ext_resource type="PackedScene" uid="uid://cwjtf1ytyfs5q" path="res://assets/architecture/landmarks/dark_tower/dark_tower_beacon_monolith_pylon.glb" id="3_tower_mesh"]
+[ext_resource type="Texture2D" uid="uid://c3f4scw875n5h" path="res://assets/textures/ground/mat.018_baseColor.jpg" id="4_albedo"]
+[ext_resource type="Texture2D" uid="uid://cnffpker8intk" path="res://assets/textures/ground/mat.018_normal.jpg" id="5_normal"]
+[ext_resource type="Texture2D" uid="uid://dt7jckyhtcchj" path="res://assets/textures/ground/mat.018_occlusion.png" id="6_roughness"]
+[ext_resource type="Texture2D" uid="uid://bin8a6qnh3j0v" path="res://assets/environment/geology_and_rocks/megascan_formations/rock_formation_modddif_image_0.png" id="7_cliff_albedo"]
+[ext_resource type="Texture2D" uid="uid://c1b0ca2wy154l" path="res://assets/environment/geology_and_rocks/megascan_formations/rock_formation_modddif_image_1.png" id="8_cliff_normal"]
+[ext_resource type="PackedScene" uid="uid://waystation_sanctuary_node0" path="res://scenes/waystation_sanctuary.tscn" id="9_sanctuary"]
+[ext_resource type="Script" path="res://world/regional_landmarks.gd" id="10_landmarks"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_twilight"]
+sky_top_color = Color(0.09, 0.1, 0.15, 1)
+sky_horizon_color = Color(0.76, 0.36, 0.16, 1)
+sky_curve = 0.11
+ground_bottom_color = Color(0.06, 0.05, 0.04, 1)
+ground_horizon_color = Color(0.38, 0.2, 0.12, 1)
+ground_curve = 0.09
+sun_angle_max = 6.0
+sun_curve = 0.15
+
+[sub_resource type="Sky" id="Sky_twilight"]
+sky_material = SubResource("ProceduralSkyMaterial_twilight")
+
+[sub_resource type="Environment" id="Environment_twilight"]
+background_mode = 2
+sky = SubResource("Sky_twilight")
+ambient_light_source = 3
+ambient_light_color = Color(0.46, 0.3, 0.2, 1)
+ambient_light_sky_contribution = 0.4
+ambient_light_energy = 0.68
+tonemap_mode = 2
+tonemap_exposure = 1.02
+tonemap_white = 1.25
+ssao_enabled = true
+ssao_radius = 1.4
+ssao_intensity = 2.2
+ssao_power = 1.8
+ssao_sharpness = 0.96
+ssr_enabled = true
+ssr_max_steps = 64
+ssr_fade_in = 0.15
+ssr_fade_out = 2.0
+ssr_depth_tolerance = 0.2
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+sdfgi_read_sky_light = true
+sdfgi_bounce_feedback = 0.5
+sdfgi_cascades = 4
+sdfgi_min_cell_size = 0.2
+sdfgi_y_scale = 1
+sdfgi_energy = 1.0
+glow_enabled = true
+glow_levels/2 = 0.8
+glow_levels/4 = 0.45
+glow_levels/6 = 0.2
+glow_intensity = 0.38
+glow_bloom = 0.12
+fog_enabled = true
+fog_light_color = Color(0.56, 0.3, 0.16, 1)
+fog_density = 0.015
+fog_aerial_perspective = 0.72
+fog_sky_affect = 0.6
+volumetric_fog_enabled = true
+volumetric_fog_density = 0.022
+volumetric_fog_albedo = Color(0.58, 0.34, 0.2, 1)
+volumetric_fog_emission = Color(0.05, 0.025, 0.015, 1)
+volumetric_fog_anisotropy = 0.45
+volumetric_fog_length = 120.0
+adjustment_enabled = true
+adjustment_contrast = 1.18
+adjustment_saturation = 0.84
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_twilight_terrain"]
+render_priority = 0
+shader = ExtResource("2_tshader")
+shader_parameter/displacement_scale = 2.5
+shader_parameter/dune_scale = 0.008
+shader_parameter/gravel_scale = 0.024
+shader_parameter/micro_scale = 0.14
+shader_parameter/wind_direction = 3.93
+shader_parameter/alkali_albedo = Color(0.78, 0.73, 0.65, 1)
+shader_parameter/alkali_roughness = 0.92
+shader_parameter/alkali_crack_scale = 0.55
+shader_parameter/alkali_crack_depth = 0.42
+shader_parameter/gravel_albedo = Color(0.34, 0.3, 0.26, 1)
+shader_parameter/gravel_roughness = 0.97
+shader_parameter/gravel_bump_strength = 1.6
+shader_parameter/dune_albedo = Color(0.62, 0.52, 0.36, 1)
+shader_parameter/dune_roughness = 0.55
+shader_parameter/dune_sparkle = 0.04
+shader_parameter/strata_albedo_a = Color(0.46, 0.34, 0.27, 1)
+shader_parameter/strata_albedo_b = Color(0.26, 0.23, 0.21, 1)
+shader_parameter/strata_roughness = 0.92
+shader_parameter/strata_frequency = 2.8
+shader_parameter/blend_sharpness = 5.0
+shader_parameter/wind_tint = Color(0.58, 0.52, 0.44, 1)
+shader_parameter/wind_tint_strength = 0.18
+shader_parameter/texture_gravel_albedo = ExtResource("4_albedo")
+shader_parameter/texture_gravel_normal = ExtResource("5_normal")
+shader_parameter/texture_gravel_roughness = ExtResource("6_roughness")
+shader_parameter/texture_cliff_albedo = ExtResource("7_cliff_albedo")
+shader_parameter/texture_cliff_normal = ExtResource("8_cliff_normal")
+shader_parameter/cliff_tile_macro = 0.035
+shader_parameter/cliff_tile_micro = 0.22
+shader_parameter/cliff_blend_sharpness = 4.0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_preview_terrain"]
+material = SubResource("ShaderMaterial_twilight_terrain")
+size = Vector2(2500, 2500)
+subdivide_width = 128
+subdivide_depth = 128
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_monolith"]
+albedo_color = Color(0.07, 0.065, 0.06, 1)
+metallic = 0.48
+roughness = 0.86
+
+[sub_resource type="BoxMesh" id="BoxMesh_monolith_spine"]
+material = SubResource("StandardMaterial3D_monolith")
+size = Vector3(11, 78, 8.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_skeletal_steel"]
+albedo_color = Color(0.13, 0.11, 0.1, 1)
+metallic = 0.82
+roughness = 0.64
+
+[sub_resource type="BoxMesh" id="BoxMesh_buttress"]
+material = SubResource("StandardMaterial3D_skeletal_steel")
+size = Vector3(4, 44, 6.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_antenna"]
+material = SubResource("StandardMaterial3D_skeletal_steel")
+top_radius = 0.3
+bottom_radius = 2.2
+height = 34.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_gantry"]
+material = SubResource("StandardMaterial3D_skeletal_steel")
+size = Vector3(16, 1.2, 2.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ka_beacon"]
+shading_mode = 0
+albedo_color = Color(1, 0.34, 0.06, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_ka_beacon"]
+material = SubResource("StandardMaterial3D_ka_beacon")
+radius = 2.1
+height = 4.2
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_twilight_dust"]
+transparency = 1
+shading_mode = 2
+vertex_color_use_as_albedo = true
+roughness = 0.95
+billboard_mode = 3
+billboard_keep_scale = true
+
+[sub_resource type="QuadMesh" id="QuadMesh_twilight_dust"]
+material = SubResource("StandardMaterial3D_twilight_dust")
+size = Vector2(0.18, 0.06)
+
+[sub_resource type="ParticleProcessMaterial" id="PPM_twilight_dust"]
+lifetime_randomness = 0.35
+emission_shape = 3
+emission_box_extents = Vector3(48, 12, 48)
+direction = Vector3(0.78, 0.04, 0.62)
+spread = 20.0
+initial_velocity_min = 2.4
+initial_velocity_max = 5.8
+gravity = Vector3(0, -0.25, 0)
+damping_min = 0.08
+damping_max = 0.16
+color = Color(0.72, 0.46, 0.28, 0.58)
+
+[node name="MainMenu" type="Node3D"]
+script = ExtResource("1_mmenu")
+
+[node name="WindAudioPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Master"
+
+[node name="SfxAudioPlayer" type="AudioStreamPlayer" parent="."]
+bus = &"Master"
+
+[node name="CrossroadsBackdrop" type="Node3D" parent="."]
+
+[node name="TwilightEnvironment" type="WorldEnvironment" parent="CrossroadsBackdrop"]
+environment = SubResource("Environment_twilight")
+
+[node name="TwilightSun" type="DirectionalLight3D" parent="CrossroadsBackdrop"]
+transform = Transform3D(0.707107, -0.218508, 0.672499, 0, 0.951057, 0.309017, -0.707107, -0.218508, 0.672499, 0, 18, 0)
+light_color = Color(0.98, 0.52, 0.24, 1)
+light_energy = 1.85
+shadow_enabled = true
+shadow_bias = 0.008
+shadow_normal_bias = 0.8
+directional_shadow_blend_splits = true
+
+[node name="CrossroadsCamera" type="Camera3D" parent="CrossroadsBackdrop"]
+transform = Transform3D(-0.694136, 0.0185, -0.719607, 0, 0.99967, 0.0257, 0.719844, 0.017839, -0.693906, -1196, 4.5, -1194)
+current = true
+fov = 36.0
+far = 1200.0
+
+[node name="DesertPreviewTerrain" type="MeshInstance3D" parent="CrossroadsBackdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("PlaneMesh_preview_terrain")
+
+[node name="WaystationSanctuary" parent="CrossroadsBackdrop" instance=ExtResource("9_sanctuary")]
+
+[node name="RegionalLandmarks" type="Node3D" parent="CrossroadsBackdrop"]
+script = ExtResource("10_landmarks")
+
+[node name="DarkTowerMonolith" type="Node3D" parent="CrossroadsBackdrop"]
+transform = Transform3D(0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, 0.707107, 700, 0, 700)
+
+[node name="TowerModel" parent="CrossroadsBackdrop/DarkTowerMonolith" instance=ExtResource("3_tower_mesh")]
+transform = Transform3D(97.456, 0, 0, 0, 97.456, 0, 0, 0, 97.456, 0, 0, 0)
+
+[node name="KaBeacon" type="MeshInstance3D" parent="CrossroadsBackdrop/DarkTowerMonolith"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 112, 0)
+mesh = SubResource("SphereMesh_ka_beacon")
+
+[node name="BeaconLight" type="OmniLight3D" parent="CrossroadsBackdrop/DarkTowerMonolith/KaBeacon"]
+light_color = Color(1, 0.42, 0.12, 1)
+light_energy = 8.5
+omni_range = 85.0
+omni_attenuation = 1.35
+
+[node name="TwilightDustParticles" type="GPUParticles3D" parent="CrossroadsBackdrop"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1180, 4, -1180)
+amount = 520
+lifetime = 9.0
+visibility_aabb = AABB(-120, -10, -120, 240, 40, 240)
+process_material = SubResource("PPM_twilight_dust")
+draw_pass_1 = SubResource("QuadMesh_twilight_dust")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="CrossroadsOverlay" type="Control" parent="UILayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftShadeGradient" type="ColorRect" parent="UILayer/CrossroadsOverlay"]
+layout_mode = 1
+anchors_preset = 9
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 520.0
+offset_bottom = 0.0
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.02, 0.016, 0.012, 0.58)
+
+[node name="TopTelemetryBar" type="MarginContainer" parent="UILayer/CrossroadsOverlay"]
+layout_mode = 1
+anchors_preset = 10
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 56.0
+grow_horizontal = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 8
+
+[node name="TelemetryRow" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/TopTelemetryBar"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="LocationTag" type="Label" parent="UILayer/CrossroadsOverlay/TopTelemetryBar/TelemetryRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.84, 0.62, 0.34, 0.78)
+theme_override_font_sizes/font_size = 12
+text = "0 · THE MOHAINE WAY-BUNKER  |  SECTOR: PILGRIMAGE THRESHOLD"
+
+[node name="AtmosphereTag" type="Label" parent="UILayer/CrossroadsOverlay/TopTelemetryBar/TelemetryRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.76, 0.66, 0.54, 0.72)
+theme_override_font_sizes/font_size = 12
+text = "ATMOSPHERE: COPPER TWILIGHT  |  AIRBORNE SILICA: 11.4 mg/m³"
+horizontal_alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UILayer/CrossroadsOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 72
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 42
+
+[node name="MainColumns" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 48
+
+[node name="LeftColumn" type="VBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns"]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="TitleBlock" type="VBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="SubtitleLabel" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/TitleBlock"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.92, 0.58, 0.24, 0.92)
+theme_override_font_sizes/font_size = 13
+text = "T H E   P A T H   O F   K A"
+autowrap_mode = 3
+
+[node name="TitleLabel" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/TitleBlock"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.93, 0.88, 0.78, 0.98)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 44
+text = "DARK TOWERS"
+autowrap_mode = 3
+
+[node name="EpigraphLabel" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/TitleBlock"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.68, 0.62, 0.52, 0.82)
+theme_override_font_sizes/font_size = 14
+text = "\"All things serve the Beam. Only the iron remembers the grit.\""
+autowrap_mode = 3
+
+[node name="Divider" type="ColorRect" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn"]
+custom_minimum_size = Vector2(360, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.76, 0.48, 0.22, 0.42)
+
+[node name="NavVBox" type="VBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn"]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="BtnBeginJourney" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/NavVBox"]
+custom_minimum_size = Vector2(360, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "  [○]  BEGIN JOURNEY"
+alignment = 0
+
+[node name="BtnResumePath" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/NavVBox"]
+custom_minimum_size = Vector2(360, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "  [·]  RESUME PATH"
+alignment = 0
+
+[node name="BtnChronicles" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/NavVBox"]
+custom_minimum_size = Vector2(360, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "  [○]  CHRONICLES"
+alignment = 0
+
+[node name="BtnEditor" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/NavVBox"]
+custom_minimum_size = Vector2(360, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "  [○]  BEAM ARCHITECT"
+alignment = 0
+
+[node name="BtnSettings" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/NavVBox"]
+custom_minimum_size = Vector2(360, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "  [○]  SETTINGS"
+alignment = 0
+
+[node name="BtnQuit" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn/NavVBox"]
+custom_minimum_size = Vector2(360, 44)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 16
+text = "  [○]  QUIT"
+alignment = 0
+
+[node name="NavStatusLabel" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/LeftColumn"]
+custom_minimum_size = Vector2(360, 38)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 0.68, 0.36, 0.88)
+theme_override_font_sizes/font_size = 12
+text = "SANDALWOOD REVOLVER (.45 LC) — STANDING BY AT THE CROSSROADS."
+autowrap_mode = 3
+
+[node name="RightColumn" type="CenterContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ChroniclesModal" type="PanelContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn"]
+visible = false
+custom_minimum_size = Vector2(540, 380)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Margin" type="MarginContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="HeaderRow" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ModalTitle" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin/VBox/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.94, 0.72, 0.34, 1)
+theme_override_font_sizes/font_size = 15
+text = "=== CHRONICLES OF THE PATH OF KA ==="
+autowrap_mode = 3
+
+[node name="BtnCloseChronicles" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin/VBox/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[ ESC / CLOSE ]"
+
+[node name="TabsHBox" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="EntryTitle" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.94, 0.88, 0.76, 1)
+theme_override_font_sizes/font_size = 18
+text = "I. THE CALICHE CRADLE"
+autowrap_mode = 3
+
+[node name="EntrySubtitle" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.84, 0.62, 0.34, 0.9)
+theme_override_font_sizes/font_size = 12
+text = "Topological Survey — Sector 01"
+autowrap_mode = 3
+
+[node name="EntryBody" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/ChroniclesModal/Margin/VBox"]
+custom_minimum_size = Vector2(480, 190)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.82, 0.78, 0.7, 0.94)
+theme_override_font_sizes/font_size = 14
+text = "An alkali basin scoured by northeast trade winds..."
+autowrap_mode = 3
+
+[node name="SettingsModal" type="PanelContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn"]
+visible = false
+custom_minimum_size = Vector2(540, 420)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Margin" type="MarginContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal"]
+layout_mode = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 20
+
+[node name="VBox" type="VBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 14
+
+[node name="HeaderRow" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ModalTitle" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/HeaderRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.94, 0.72, 0.34, 1)
+theme_override_font_sizes/font_size = 15
+text = "=== SETTINGS & TACTICAL CALIBRATION ==="
+autowrap_mode = 3
+
+[node name="BtnCloseSettings" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/HeaderRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[ ESC / CLOSE ]"
+
+[node name="LanguageRow" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/LanguageRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "LANGUAGE / IDIOMA:"
+
+[node name="LanguageOption" type="OptionButton" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/LanguageRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 13
+selected = 0
+item_count = 2
+popup/item_0/text = "ENGLISH (EN)"
+popup/item_0/id = 0
+popup/item_1/text = "ESPAÑOL (ES)"
+popup/item_1/id = 1
+
+[node name="BtnCycleLanguage" type="Button" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/LanguageRow"]
+custom_minimum_size = Vector2(64, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[ EN ]"
+
+[node name="MasterVolRow" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/MasterVolRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "MASTER GAIN:"
+
+[node name="MasterVolSlider" type="HSlider" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/MasterVolRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 85.0
+
+[node name="MasterVolValue" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/MasterVolRow"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "85%"
+horizontal_alignment = 2
+
+[node name="WindVolRow" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="Label" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/WindVolRow"]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "WIND DRONE LEVEL:"
+
+[node name="WindVolSlider" type="HSlider" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/WindVolRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 75.0
+
+[node name="WindVolValue" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/WindVolRow"]
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "75%"
+horizontal_alignment = 2
+
+[node name="GraphicsRow" type="HBoxContainer" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+
+[node name="TaaCheck" type="CheckButton" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/GraphicsRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+button_pressed = true
+text = "TEMPORAL AA (TAA)"
+
+[node name="FogCheck" type="CheckButton" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox/GraphicsRow"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+button_pressed = true
+text = "VOLUMETRIC DUST FOG"
+
+[node name="ControlsHeader" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.92, 0.68, 0.32, 0.92)
+theme_override_font_sizes/font_size = 13
+text = "DIEGETIC FIREARM & SURVIVAL BINDINGS:"
+autowrap_mode = 3
+
+[node name="ControlsBody" type="Label" parent="UILayer/CrossroadsOverlay/MarginContainer/MainColumns/RightColumn/SettingsModal/Margin/VBox"]
+custom_minimum_size = Vector2(480, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.78, 0.74, 0.66, 0.9)
+theme_override_font_sizes/font_size = 12
+text = "[WASD] Move   | [SHIFT] Sprint    | [CTRL / C] Crouch | [SPACE] Jump
+[LMB]  Fire   | [RMB]   Aim (ADS) | [F] Cock Hammer   | [R] Load Single Round
+[V] Clear Jam | [B] Field Clean   | [H] Holster Iron  | [I] Tactile Inspect"
+autowrap_mode = 3
+
+[node name="PrologueOverlay" type="Control" parent="UILayer"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DustBackdropDim" type="ColorRect" parent="UILayer/PrologueOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.024, 0.018, 0.014, 0.86)
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/PrologueOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ParchmentTablet" type="Control" parent="UILayer/PrologueOverlay/CenterContainer"]
+custom_minimum_size = Vector2(760, 440)
+layout_mode = 2
+
+[node name="ParchmentCanvas" type="Control" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Margin" type="MarginContainer" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 44
+theme_override_constants/margin_top = 36
+theme_override_constants/margin_right = 44
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="HeaderLabel" type="Label" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.84, 0.58, 0.28, 0.85)
+theme_override_font_sizes/font_size = 12
+text = "III · PROLOGUE  —  FIELD DISPATCH: THE CALICHE CRADLE"
+autowrap_mode = 3
+
+[node name="TitleLabel" type="Label" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.94, 0.88, 0.76, 0.98)
+theme_override_font_sizes/font_size = 24
+text = "THE WEIGHT OF KA"
+autowrap_mode = 3
+
+[node name="EtchedRule" type="ColorRect" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox"]
+custom_minimum_size = Vector2(0, 1)
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.76, 0.52, 0.26, 0.42)
+
+[node name="BodyScroll" type="MarginContainer" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="BodyLabel" type="Label" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox/BodyScroll"]
+custom_minimum_size = Vector2(660, 210)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_colors/font_color = Color(0.88, 0.82, 0.7, 0.96)
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 17
+text = "For forty days the alkali salt has eaten the heels from your boots..."
+autowrap_mode = 3
+
+[node name="FooterRow" type="HBoxContainer" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="ProgressLabel" type="Label" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox/FooterRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.72, 0.58, 0.38, 0.85)
+theme_override_font_sizes/font_size = 12
+text = "ETCHING ARCHIVE...  0%"
+
+[node name="BtnSkipPrologue" type="Button" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox/FooterRow"]
+custom_minimum_size = Vector2(130, 38)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "[ESC] SKIP"
+
+[node name="BtnAdvancePrologue" type="Button" parent="UILayer/PrologueOverlay/CenterContainer/ParchmentTablet/Margin/VBox/FooterRow"]
+custom_minimum_size = Vector2(280, 38)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "  [●]  COMPLETE INSCRIPTION  [SPACE]"
+
+[node name="GateOverlay" type="Control" parent="UILayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PitchBlackBg" type="ColorRect" parent="UILayer/GateOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.02, 0.018, 0.015, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="UILayer/GateOverlay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="UILayer/GateOverlay/CenterContainer"]
+custom_minimum_size = Vector2(680, 0)
+layout_mode = 2
+theme_override_constants/separation = 22
+
+[node name="HeaderTag" type="Label" parent="UILayer/GateOverlay/CenterContainer/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.56, 0.45, 0.28, 0.72)
+theme_override_font_sizes/font_size = 12
+text = "I · THE GATE"
+horizontal_alignment = 1
+
+[node name="QuoteRow" type="HBoxContainer" parent="UILayer/GateOverlay/CenterContainer/VBox"]
+custom_minimum_size = Vector2(680, 42)
+layout_mode = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="QuoteLabel" type="Label" parent="UILayer/GateOverlay/CenterContainer/VBox/QuoteRow"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.88, 0.83, 0.73, 0.96)
+theme_override_font_sizes/font_size = 20
+text = "The man in black fled across the desert, and the gunslinger followed..."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="AmberCursor" type="Label" parent="UILayer/GateOverlay/CenterContainer/VBox/QuoteRow"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.68, 0.24, 0.92)
+theme_override_font_sizes/font_size = 20
+text = "▌"
+
+[node name="CylinderHost" type="CenterContainer" parent="UILayer/GateOverlay/CenterContainer/VBox"]
+layout_mode = 2
+
+[node name="CylinderIndicator" type="Control" parent="UILayer/GateOverlay/CenterContainer/VBox/CylinderHost"]
+custom_minimum_size = Vector2(96, 96)
+layout_mode = 2
+
+[node name="ChamberReadoutLabel" type="Label" parent="UILayer/GateOverlay/CenterContainer/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.86, 0.66, 0.32, 0.88)
+theme_override_font_sizes/font_size = 13
+text = "CYLINDER: [○][○][○][○][○][○]  0 / 6"
+horizontal_alignment = 1
+
+[node name="SilicaLineIndicator" type="Control" parent="UILayer/GateOverlay/CenterContainer/VBox"]
+custom_minimum_size = Vector2(560, 14)
+layout_mode = 2
+
+[node name="StageLabel" type="Label" parent="UILayer/GateOverlay/CenterContainer/VBox"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.56, 0.46, 0.78)
+theme_override_font_sizes/font_size = 12
+text = "CHAMBER I — SURVEYING ALKALI FLATS"
+horizontal_alignment = 1

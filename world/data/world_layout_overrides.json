@@ -1,0 +1,3307 @@
+{
+	"deletions": [
+		"Q01_MedievalRuin_10_Assets_10",
+		"HorizonLandmark_DarkTower",
+		"Q01_MedievalRuin_1_Assets_1",
+		"RegionalLandmarks",
+		"Ambient_Structure",
+		"WaystationSanctuary",
+		"EscarpmentRock_2021",
+		"EscarpmentRock_1041",
+		"EscarpmentRock_2011",
+		"EscarpmentRock_1031",
+		"EscarpmentRock_1021",
+		"EscarpmentRock_1011",
+		"EscarpmentRock_2031",
+		"EscarpmentRock_2041",
+		"Mohaine_OutcropShelf_5",
+		"EscarpmentRock_1012",
+		"EscarpmentRock_1032",
+		"EscarpmentRock_1022",
+		"EscarpmentRock_1042",
+		"EscarpmentRock_2022",
+		"EscarpmentRock_2012",
+		"EscarpmentRock_2032",
+		"EscarpmentRock_2042"
+	],
+	"modifications": {
+		"@Node3D@1452053": {
+			"position": [
+				-990.44616699218795,
+				0.897244393825531,
+				-828.66461181640614
+			],
+			"rotation": [
+				-4,
+				90,
+				0
+			],
+			"scale": [
+				2.85311722755432,
+				2.8531174659729,
+				2.8531174659729
+			]
+		},
+		"@Node3D@1452054": {
+			"position": [
+				-1190.36303710938,
+				8.59485530853271,
+				-746.05499267578091
+			],
+			"rotation": [
+				5.99999952316284,
+				45,
+				0
+			],
+			"scale": [
+				3.13842868804932,
+				3.1384289264679,
+				3.13842868804932
+			]
+		},
+		"@Node3D@1452055": {
+			"position": [
+				-1055.34948730469,
+				7.54134225845337,
+				-870.04315185546898
+			],
+			"rotation": [
+				4.99999856948853,
+				-14.9999933242798,
+				0
+			],
+			"scale": [
+				2.85311722755432,
+				2.85311818122864,
+				2.85311675071716
+			]
+		},
+		"@Node3D@1452071": {
+			"position": [
+				-977.84924316406205,
+				3.84308576583862,
+				-997.470703125
+			],
+			"rotation": [
+				14.8364248275757,
+				156.467132568359,
+				14.9999990463257
+			],
+			"scale": [
+				1,
+				0.999999940395355,
+				0.999999940395355
+			]
+		},
+		"@Node3D@1452073": {
+			"position": [
+				-1039.32739257812,
+				9.28386116027832,
+				-1105.62683105469
+			],
+			"rotation": [
+				12.1296110153198,
+				-168.22593688964801,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"@Node3D@1452075": {
+			"position": [
+				-996.27288818359386,
+				6.8164587020874,
+				-1123.3388671875
+			],
+			"rotation": [
+				15.2189750671387,
+				22.837043762207,
+				-75.00001525878911
+			],
+			"scale": [
+				0.99999988079071,
+				0.999999761581421,
+				0.999999821186066
+			]
+		},
+		"@Node3D@1452077": {
+			"position": [
+				-1086.02258300781,
+				7.54486513137817,
+				-1144.09924316406
+			],
+			"rotation": [
+				8.76443862915039,
+				179.723434448242,
+				0
+			],
+			"scale": [
+				1.6105101108551,
+				1.61050999164581,
+				1.61051046848297
+			]
+		},
+		"@Node3D@171": {
+			"position": [
+				-1089.30102539062,
+				3.67392158508301,
+				-813.61315917968795
+			],
+			"rotation": [
+				-4,
+				90,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"@Node3D@172": {
+			"position": [
+				-1063.41137695312,
+				3.65323662757874,
+				-842.26837158203102
+			],
+			"rotation": [
+				6,
+				45,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				1
+			]
+		},
+		"@Node3D@173": {
+			"position": [
+				-1019.81567382812,
+				2.63444709777832,
+				-856.457763671875
+			],
+			"rotation": [
+				5,
+				-15.0000009536743,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				0.999999940395355
+			]
+		},
+		"@Node3D@189": {
+			"position": [
+				-1107.12036132812,
+				9.11960124969482,
+				-714.49060058593795
+			],
+			"rotation": [
+				10.3121795654297,
+				168.245346069336,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"@Node3D@199": {
+			"position": [
+				-1117.87182617188,
+				3.80986380577087,
+				-855.27020263671909
+			],
+			"rotation": [
+				-4,
+				-29.9999980926514,
+				0
+			],
+			"scale": [
+				0.999999761581421,
+				1,
+				0.999999821186066
+			]
+		},
+		"@Node3D@200": {
+			"position": [
+				-1059.75842285156,
+				3.16288828849792,
+				-915.15679931640614
+			],
+			"rotation": [
+				6,
+				45,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				1
+			]
+		},
+		"@Node3D@201": {
+			"position": [
+				-1029.55114746094,
+				2.7948145866394,
+				-859.58184814453102
+			],
+			"rotation": [
+				5,
+				-15.0000009536743,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				0.999999940395355
+			]
+		},
+		"@Node3D@213": {
+			"position": [
+				-1073.62841796875,
+				16.0261783599854,
+				-713.99346923828102
+			],
+			"rotation": [
+				10.6047468185425,
+				169.293060302734,
+				0
+			],
+			"scale": [
+				0.999999642372131,
+				1,
+				0.999999701976776
+			]
+		},
+		"@Node3D@215": {
+			"position": [
+				-1227.06127929688,
+				12.9841079711914,
+				-576.84283447265602
+			],
+			"rotation": [
+				15.9933643341064,
+				-171.41041564941401,
+				-90
+			],
+			"scale": [
+				0.999999165534973,
+				0.999999701976776,
+				1
+			]
+		},
+		"@Node3D@217": {
+			"position": [
+				-1025.01867675781,
+				3.37683010101318,
+				-707.26593017578102
+			],
+			"rotation": [
+				10.3121795654297,
+				168.245346069336,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"@Node3D@221": {
+			"position": [
+				-1112.14965820312,
+				8.54654407501221,
+				-711.67028808593795
+			],
+			"rotation": [
+				15.8235578536987,
+				22.9815120697021,
+				-60.0000305175781
+			],
+			"scale": [
+				0.999999642372131,
+				0.999999105930328,
+				0.999999403953552
+			]
+		},
+		"@Node3D@223": {
+			"position": [
+				-1043.90063476562,
+				5.38026809692383,
+				-690.83142089843795
+			],
+			"rotation": [
+				14.4451246261597,
+				-41.9546012878418,
+				-15.0000143051147
+			],
+			"scale": [
+				1.33099901676178,
+				1.33099973201752,
+				1.3309999704361
+			]
+		},
+		"@Node3D@227": {
+			"position": [
+				-1000.38214111328,
+				-4.53153705596924,
+				-705.87072753906205
+			],
+			"rotation": [
+				11.7598085403442,
+				-21.5707035064697,
+				0
+			],
+			"scale": [
+				0.999999642372131,
+				1,
+				0.999999582767487
+			]
+		},
+		"@Node3D@229": {
+			"position": [
+				-973.58599853515602,
+				6.18341016769409,
+				-694.973876953125
+			],
+			"rotation": [
+				15.0377149581909,
+				-9.83256149291992,
+				0
+			],
+			"scale": [
+				0.999999821186066,
+				0.999999940395355,
+				0.999999761581421
+			]
+		},
+		"@Node3D@233": {
+			"position": [
+				-945.82000732421909,
+				7.22867727279663,
+				-701.11212158203102
+			],
+			"rotation": [
+				14.9168701171875,
+				4.73468160629272,
+				-75
+			],
+			"scale": [
+				0.999999463558197,
+				0.999999523162842,
+				0.999999105930328
+			]
+		},
+		"@Node3D@239": {
+			"position": [
+				-900.50750732421909,
+				2.26934361457825,
+				-692.20690917968795
+			],
+			"rotation": [
+				9.5876579284668,
+				-14.3491249084473,
+				134.999969482422
+			],
+			"scale": [
+				1.6105090379715,
+				1.61050927639008,
+				1.61050987243652
+			]
+		},
+		"@Node3D@281": {
+			"position": [
+				-1045,
+				2.59101486206055,
+				-815
+			],
+			"rotation": [
+				-4,
+				90,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"@Node3D@282": {
+			"position": [
+				-1038,
+				3.28047943115234,
+				-838
+			],
+			"rotation": [
+				6,
+				45,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				1
+			]
+		},
+		"@Node3D@283": {
+			"position": [
+				-1015,
+				1.96589076519012,
+				-842
+			],
+			"rotation": [
+				5,
+				-15.0000009536743,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				0.999999940395355
+			]
+		},
+		"@Node3D@298": {
+			"position": [
+				-1102.25842285156,
+				-4.84470844268799,
+				-1145.66674804688
+			],
+			"rotation": [
+				8.54105949401855,
+				66.3036422729492,
+				0
+			],
+			"scale": [
+				1,
+				0.999999940395355,
+				0.999999940395355
+			]
+		},
+		"@Node3D@299": {
+			"position": [
+				-1206.72253417969,
+				7.82247018814087,
+				-1177.00805664062
+			],
+			"rotation": [
+				9.19266986846924,
+				68.6370544433594,
+				0
+			],
+			"scale": [
+				1,
+				0.999999940395355,
+				0.999999940395355
+			]
+		},
+		"@Node3D@300": {
+			"position": [
+				-1192.29309082031,
+				-3.38018321990967,
+				-1204.23815917969
+			],
+			"rotation": [
+				10.6055593490601,
+				6.31645727157593,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				0.999999940395355
+			]
+		},
+		"@Node3D@301": {
+			"position": [
+				-1140.4375,
+				13.2974643707275,
+				-1060.85400390625
+			],
+			"rotation": [
+				8.54105949401855,
+				66.3036422729492,
+				0
+			],
+			"scale": [
+				1,
+				0.999999940395355,
+				0.999999940395355
+			]
+		},
+		"@Node3D@303": {
+			"position": [
+				-1062.11950683594,
+				2.48398089408875,
+				-1147.94006347656
+			],
+			"rotation": [
+				10.6055593490601,
+				6.31645727157593,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				0.999999940395355
+			]
+		},
+		"DarkTowerCitadelSpire": {
+			"position": [
+				713.751281738281,
+				7.36484527587891,
+				699.537658691406
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				4.95388746261597,
+				4.95388746261597,
+				4.95388746261597
+			]
+		},
+		"Mohaine_OutcropShelf_1": {
+			"position": [
+				-969.45739746093761,
+				2.92505121231079,
+				-773.93145751953125
+			],
+			"rotation": [
+				4.99999904632568,
+				14.9999990463257,
+				0
+			],
+			"scale": [
+				0.999999821186066,
+				1,
+				0.99999988079071
+			]
+		},
+		"Mohaine_OutcropShelf_2": {
+			"position": [
+				-1038,
+				2.27560663223267,
+				-794
+			],
+			"rotation": [
+				8,
+				-30,
+				0
+			],
+			"scale": [
+				1,
+				0.999999940395355,
+				0.999999940395355
+			]
+		},
+		"Mohaine_OutcropShelf_3": {
+			"position": [
+				-995.212890625,
+				-2.99729919433594,
+				-755.89990234375
+			],
+			"rotation": [
+				-3.99999976158142,
+				90,
+				0
+			],
+			"scale": [
+				2.85311722755432,
+				2.8531174659729,
+				2.8531174659729
+			]
+		},
+		"Mohaine_OutcropShelf_4": {
+			"position": [
+				-1038,
+				3.28047943115234,
+				-838
+			],
+			"rotation": [
+				5.99999952316284,
+				45,
+				0
+			],
+			"scale": [
+				0.999999940395355,
+				1,
+				1
+			]
+		},
+		"OldOnesMegastructureRuin": {
+			"position": [
+				700.22900390625,
+				3.48259878158569,
+				37.7970428466797
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"PerimeterBarrierWalls": {
+			"position": [
+				-1004.50482177734,
+				52.7120170593262,
+				-637.76898193359398
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"Q01_MedievalRuin_10_Assets_10": {
+			"position": [
+				-941.32531738281205,
+				-0.60244065523148,
+				-1069.259765625
+			],
+			"rotation": [
+				0,
+				-31.4627475738525,
+				0
+			],
+			"scale": [
+				4.66018390655518,
+				4.66018342971802,
+				4.66018390655518
+			]
+		},
+		"Q01_MedievalRuin_11_Assets_11": {
+			"position": [
+				-1204.0849609375,
+				-58.8684501647949,
+				-817.27606201171909
+			],
+			"rotation": [
+				0.00000105614958556,
+				-20.4506664276123,
+				-90
+			],
+			"scale": [
+				8.51664066314697,
+				8.51664447784424,
+				8.51664447784424
+			]
+		},
+		"Q01_MedievalRuin_13_Assets_9": {
+			"position": [
+				-938.40710449218795,
+				47.7922973632812,
+				-681.71740722656205
+			],
+			"rotation": [
+				0.00000242527244154,
+				98.8403244018555,
+				-45.0000190734863
+			],
+			"scale": [
+				15.9311571121216,
+				15.9311590194702,
+				15.9311599731445
+			]
+		},
+		"Q01_MedievalRuin_14_Assets_1": {
+			"position": [
+				-887.63531494140614,
+				-1.01459801197052,
+				-1077.93518066406
+			],
+			"rotation": [
+				0,
+				81.8611145019531,
+				0
+			],
+			"scale": [
+				6.75633525848389,
+				6.75634098052979,
+				6.75633525848389
+			]
+		},
+		"Q01_MedievalRuin_1_Assets_1": {
+			"position": [
+				-912.73193359375,
+				-3.10601472854614,
+				-853.250244140625
+			],
+			"rotation": [
+				0,
+				-25.5763416290283,
+				0
+			],
+			"scale": [
+				6.73732233047485,
+				6.73732376098633,
+				6.73732233047485
+			]
+		},
+		"Q01_MedievalRuin_2_Asstes_2": {
+			"position": [
+				-960.68701171875,
+				2.83319568634033,
+				-949.07666015625
+			],
+			"rotation": [
+				0,
+				78.4427337646484,
+				0
+			],
+			"scale": [
+				8.65738964080811,
+				8.65739059448242,
+				8.65738964080811
+			]
+		},
+		"Q01_MedievalRuin_3_Assets_3": {
+			"position": [
+				-829.43933105468795,
+				-0.85790479183197,
+				-965.124267578125
+			],
+			"rotation": [
+				0,
+				-92.967041015625,
+				0
+			],
+			"scale": [
+				0.999374270439148,
+				0.999374270439148,
+				0.999374270439148
+			]
+		},
+		"Q01_MedievalRuin_5_Assets_4": {
+			"position": [
+				-1107.681884765625,
+				-4.37721920013428,
+				-1120.4525146484375
+			],
+			"rotation": [
+				-0,
+				-8.2511625289917,
+				0
+			],
+			"scale": [
+				13.3180150985718,
+				13.318021774292,
+				13.3180150985718
+			]
+		},
+		"Q01_MedievalRuin_6_Assets_5": {
+			"position": [
+				-982.95916748046875,
+				-0.50460433959961,
+				-791.6419677734375
+			],
+			"rotation": [
+				-0,
+				18.8877086639404,
+				0
+			],
+			"scale": [
+				9.16813659667969,
+				9.16813659667969,
+				9.16813659667969
+			]
+		},
+		"Q01_MedievalRuin_7_Assets_8": {
+			"position": [
+				-1057.698486328125,
+				-0.79356652498245,
+				-989.51477050781227
+			],
+			"rotation": [
+				-0.00000034324549,
+				-76.43403625488281,
+				0
+			],
+			"scale": [
+				4.69857978820801,
+				4.69858026504517,
+				4.69857978820801
+			]
+		},
+		"Q01_MedievalRuin_8_Assets_6": {
+			"position": [
+				-931.45599365234398,
+				-2.7414767742157,
+				-765.42413330078091
+			],
+			"rotation": [
+				0,
+				-142.48428344726599,
+				0
+			],
+			"scale": [
+				12.2080221176147,
+				12.2080249786377,
+				12.2080221176147
+			]
+		},
+		"Q01_MedievalRuin_9_Assets_12": {
+			"position": [
+				-730.558349609375,
+				162.514617919922,
+				-775.58026123046875
+			],
+			"rotation": [
+				-0.00000488136584,
+				39.6583137512207,
+				90.0000076293945
+			],
+			"scale": [
+				12.3739261627197,
+				12.3739261627197,
+				12.3739318847656
+			]
+		},
+		"Rock1_38K": {
+			"position": [
+				-945.06463623046898,
+				9.62562084197998,
+				-774.50964355468795
+			],
+			"rotation": [
+				4.99999856948853,
+				14.9999933242798,
+				0
+			],
+			"scale": [
+				3.13842916488647,
+				3.13842916488647,
+				3.13842868804932
+			]
+		},
+		"Rock2_41K": {
+			"position": [
+				-1060.95129394531,
+				0.14839169383049,
+				-811.130859375
+			],
+			"rotation": [
+				8.00000286102295,
+				-29.9999980926514,
+				0
+			],
+			"scale": [
+				5.05447149276733,
+				5.05447149276733,
+				5.05447149276733
+			]
+		},
+		"Rock5a_37K": {
+			"position": [
+				-1196.27734375,
+				21.9725189208984,
+				-569.71447753906205
+			],
+			"rotation": [
+				13.0014791488647,
+				-2.12423968315125,
+				0
+			],
+			"scale": [
+				0.999999105930328,
+				0.999998807907104,
+				0.999999225139618
+			]
+		},
+		"Rock5c_23K": {
+			"position": [
+				-1244.64990234375,
+				6.15694952011108,
+				-720.58508300781205
+			],
+			"rotation": [
+				14.7181987762451,
+				19.0232830047607,
+				-74.9999923706055
+			],
+			"scale": [
+				0.999999403953552,
+				0.999999403953552,
+				1
+			]
+		},
+		"ScrapNode_1": {
+			"position": [
+				-721.284423828125,
+				-2.62645292282104,
+				-847.31634521484398
+			],
+			"rotation": [
+				0,
+				53.7026596069336,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"ScrapNode_4": {
+			"position": [
+				-525.91387939453102,
+				-0.08901657164097,
+				-939.28582763671909
+			],
+			"rotation": [
+				0,
+				-153.97065734863301,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		"WastelandRaiders": {
+			"position": [
+				549.613159179688,
+				0.565628945827484,
+				362.486541748047
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		}
+	},
+	"spawned": [
+		{
+			"asset_id": "custom_rock1",
+			"asset_path": "res://assets/environment/geology_and_rocks/boulders_and_stones/rock1.glb",
+			"instance_id": "CustomProp_custom_rock1_001",
+			"position": [
+				-710.46173095703102,
+				-1.65555989742279,
+				-831.98077392578091
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.0084666833281517,
+				0.0084666833281517,
+				0.0084666833281517
+			]
+		},
+		{
+			"asset_id": "custom_terrain",
+			"asset_path": "res://assets/environment/geology_and_rocks/boulders_and_stones/terrain.glb",
+			"instance_id": "CustomProp_custom_terrain_005",
+			"position": [
+				-996.84771728515602,
+				-19.9291400909424,
+				-476.99871826171898
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				3.07494115829468,
+				3.07494115829468,
+				3.07494115829468
+			]
+		},
+		{
+			"asset_id": "prop",
+			"instance_id": "Rock5c_23K_Copy",
+			"position": [
+				-1235.47973632812,
+				6.36018800735474,
+				-716.807373046875
+			],
+			"rotation": [
+				14.7182054519653,
+				19.023286819458,
+				-59.9999961853027
+			],
+			"scale": [
+				0.999999403953552,
+				0.999999463558197,
+				1
+			]
+		},
+		{
+			"asset_id": "prop",
+			"instance_id": "Rock5c_23K_Copy_Copy",
+			"position": [
+				-1172.19848632812,
+				2.6827232837677,
+				-712.88922119140602
+			],
+			"rotation": [
+				14.7182054519653,
+				19.023286819458,
+				-59.9999961853027
+			],
+			"scale": [
+				0.999999403953552,
+				0.999999463558197,
+				1
+			]
+		},
+		{
+			"asset_id": "prop",
+			"instance_id": "Q01_MedievalRuin_13_Assets_9_Copy",
+			"position": [
+				-982.78430175781205,
+				-1.60782051086426,
+				-1068.72888183594
+			],
+			"rotation": [
+				-0.00001591822002,
+				-160.69143676757801,
+				0
+			],
+			"scale": [
+				4.20813655853271,
+				4.20813989639282,
+				4.20813989639282
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "CustomProp_custom_dry_realistic_grass_lods_1_003",
+			"position": [
+				-1066.57238769531,
+				-2.76819324493408,
+				-1096.45251464844
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "CustomProp_custom_dry_realistic_grass_lods_1_003_Copy",
+			"position": [
+				-1067.01159667969,
+				-3.33013987541199,
+				-1109.55297851562
+			],
+			"rotation": [
+				0,
+				-59.9999961853027,
+				0
+			],
+			"scale": [
+				0.999999821186066,
+				1,
+				0.999999821186066
+			]
+		},
+		{
+			"asset_id": "custom_broken_house",
+			"asset_path": "res://assets/architecture/ruins_and_buildings/residential/broken_house.glb",
+			"instance_id": "CustomProp_custom_broken_house_004",
+			"position": [
+				-541.0377197265625,
+				1.50344014167786,
+				-973.239013671875
+			],
+			"rotation": [
+				0.00000148673495914,
+				90,
+				-14.99999523162842
+			],
+			"scale": [
+				2.85311627388,
+				2.85311722755432,
+				2.85311698913574
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "CustomProp_custom_wallbarriers_005_Copy",
+			"position": [
+				-644.91943359375,
+				-1.10343933105469,
+				-1244.86279296875
+			],
+			"rotation": [
+				-0,
+				0,
+				0
+			],
+			"scale": [
+				29.9945526123047,
+				29.9945602416992,
+				29.9945526123047
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "CustomProp_custom_wallbarriers_005_Copy_Copy",
+			"position": [
+				-1041.076171875,
+				0.542541205883026,
+				-1235.6651611328125
+			],
+			"rotation": [
+				-0,
+				0.00000595154142501,
+				0
+			],
+			"scale": [
+				27.5432071685791,
+				27.5432147979736,
+				27.5432071685791
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "@Node3D@970088",
+			"position": [
+				-1235.2783203125,
+				0.44284263253212,
+				-791.7330322265625
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy",
+			"position": [
+				-1237.25231933594,
+				-22.7135410308838,
+				-456.12628173828102
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy",
+			"position": [
+				-1230.64929199219,
+				-26.2551116943359,
+				-239.770263671875
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy",
+			"position": [
+				-1226.44787597656,
+				-26.9625263214111,
+				1.35043334960938
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-1220.294921875,
+				-26.3497219085693,
+				238.781448364258
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-1218.73010253906,
+				-24.8350067138672,
+				417.720611572266
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-1230.84619140625,
+				-21.6340370178223,
+				669.091430664062
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-1226.85217285156,
+				-21.0282382965088,
+				910.285278320312
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-1218.63732910156,
+				-22.2227840423584,
+				1128.36682128906
+			],
+			"rotation": [
+				-0.00000000000001,
+				90,
+				0
+			],
+			"scale": [
+				27.5432033538818,
+				27.5432109832764,
+				27.5432033538818
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-1081.75146484375,
+				-23.5044746398926,
+				1229.42602539062
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-828.62188720703102,
+				-23.7873516082764,
+				1221.45837402344
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-558.63977050781205,
+				-22.9981670379639,
+				1215.52294921875
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-295.11541748046898,
+				-23.7640933990479,
+				1206.82397460938
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-36.7155342102051,
+				-23.6814079284668,
+				1197.86450195312
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				322.785614013672,
+				-23.7974872589111,
+				1228.65161132812
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				587.444519042969,
+				-24.2122383117676,
+				1223.46569824219
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				844.551025390625,
+				-23.138204574585,
+				1217.42919921875
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1102.05249023438,
+				-23.7804069519043,
+				1211.54052734375
+			],
+			"rotation": [
+				0.00000078882533216,
+				-180,
+				-0.00000091085752
+			],
+			"scale": [
+				29.9945449829102,
+				29.9945545196533,
+				29.9945487976074
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1222.07873535156,
+				-23.5446510314941,
+				1097.7421875
+			],
+			"rotation": [
+				0.00000078882510479,
+				-89.99998474121089,
+				-0.00000091085775
+			],
+			"scale": [
+				29.9945392608643,
+				29.9945545196533,
+				29.9945449829102
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1215.298828125,
+				-29.8417434692383,
+				840.619140625
+			],
+			"rotation": [
+				0.00000078882510479,
+				-89.99998474121089,
+				-0.00000091085775
+			],
+			"scale": [
+				29.9945392608643,
+				29.9945545196533,
+				29.9945449829102
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1210.9013671875,
+				-23.820613861084,
+				581.809631347656
+			],
+			"rotation": [
+				0.00000078882510479,
+				-89.99998474121089,
+				-0.00000091085775
+			],
+			"scale": [
+				29.9945392608643,
+				29.9945545196533,
+				29.9945449829102
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1203.89318847656,
+				-24.8495235443115,
+				321.042327880859
+			],
+			"rotation": [
+				0.00000078882504794,
+				-89.99998474121089,
+				-0.00000091085775
+			],
+			"scale": [
+				29.9945373535156,
+				29.9945545196533,
+				29.9945449829102
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1199.85620117188,
+				-24.2642993927002,
+				61.0806579589844
+			],
+			"rotation": [
+				0.00000078882504794,
+				-89.99998474121089,
+				-0.00000091085775
+			],
+			"scale": [
+				29.9945373535156,
+				29.9945545196533,
+				29.9945449829102
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1196.09704589844,
+				-24.5482959747314,
+				-202.00222778320301
+			],
+			"rotation": [
+				0.00000078882504794,
+				-89.99998474121089,
+				-0.00000091085775
+			],
+			"scale": [
+				29.9945373535156,
+				29.9945545196533,
+				29.9945449829102
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1189.28125,
+				-24.995231628418,
+				-465.93258666992199
+			],
+			"rotation": [
+				0.00000078882504794,
+				-89.99998474121089,
+				-0.00000091085775
+			],
+			"scale": [
+				29.9945373535156,
+				29.9945545196533,
+				29.9945449829102
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1249,
+				-23.9953079223633,
+				-642.19287109375
+			],
+			"rotation": [
+				0.00000078882487741,
+				-165,
+				-0.00000091085803
+			],
+			"scale": [
+				29.9945278167725,
+				29.9945545196533,
+				29.994535446167
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1231.8330078125,
+				-23.4614944458008,
+				-702.76458740234398
+			],
+			"rotation": [
+				0.00000078882482057,
+				-89.9999923706055,
+				-0.00000091085803
+			],
+			"scale": [
+				29.9945278167725,
+				29.9945545196533,
+				29.9945316314697
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1225.10656738281,
+				-23.6889591217041,
+				-970.08447265625
+			],
+			"rotation": [
+				0.00000078882482057,
+				-89.9999923706055,
+				-0.00000091085803
+			],
+			"scale": [
+				29.9945278167725,
+				29.9945545196533,
+				29.9945316314697
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1227.12170410156,
+				-22.7802391052246,
+				-1135.42822265625
+			],
+			"rotation": [
+				0.00000078882482057,
+				-89.9999923706055,
+				-0.00000091085803
+			],
+			"scale": [
+				29.9945278167725,
+				29.9945545196533,
+				29.9945316314697
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				1123.85632324219,
+				-22.8677787780762,
+				-1236.75439453125
+			],
+			"rotation": [
+				0.00000078882487741,
+				0.00001366287142445,
+				-0.00000091085815
+			],
+			"scale": [
+				29.9945259094238,
+				29.9945545196533,
+				29.9945259094238
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				852.822204589844,
+				-24.0698337554932,
+				-1229.95922851562
+			],
+			"rotation": [
+				0.00000078882487741,
+				0.00001366287142445,
+				-0.00000091085815
+			],
+			"scale": [
+				29.9945259094238,
+				29.9945545196533,
+				29.9945259094238
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				587.146728515625,
+				-23.8962745666504,
+				-1223.72155761719
+			],
+			"rotation": [
+				0.00000078882487741,
+				0.00001366287142445,
+				-0.00000091085815
+			],
+			"scale": [
+				29.9945259094238,
+				29.9945545196533,
+				29.9945259094238
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				338.429168701172,
+				-23.7837734222412,
+				-1216.05822753906
+			],
+			"rotation": [
+				0.00000116294336294,
+				0.00001275201429962,
+				-0.0000100194402
+			],
+			"scale": [
+				29.9945240020752,
+				29.9945507049561,
+				29.9945240020752
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				71.1136932373047,
+				-23.5354824066162,
+				-1210.43432617188
+			],
+			"rotation": [
+				0.00000116294336294,
+				0.00001275201429962,
+				-0.0000100194402
+			],
+			"scale": [
+				29.9945240020752,
+				29.9945507049561,
+				29.9945240020752
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-191.52040100097699,
+				-23.5197582244873,
+				-1203.59948730469
+			],
+			"rotation": [
+				0.00000116294336294,
+				0.00001275201429962,
+				-0.0000100194402
+			],
+			"scale": [
+				29.9945240020752,
+				29.9945507049561,
+				29.9945240020752
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "_Node3D_970088_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy_Copy",
+			"position": [
+				-339.36196899414102,
+				-44.9600028991699,
+				-1194.08862304688
+			],
+			"rotation": [
+				0.00000078882612797,
+				-29.9999847412109,
+				-30.0000324249268
+			],
+			"scale": [
+				29.9945316314697,
+				29.994535446167,
+				29.9945201873779
+			]
+		},
+		{
+			"asset_id": "custom_tyrannosaurus_fossil",
+			"asset_path": "res://assets/environment/fossils_and_bones/megafauna/tyrannosaurus_fossil.glb",
+			"instance_id": "CustomProp_custom_tyrannosaurus_fossil_008",
+			"position": [
+				-608.90100097656205,
+				1.39526855945587,
+				-1243.70910644531
+			],
+			"rotation": [
+				-0.00000061471667,
+				-14.9999837875366,
+				15.0000143051147
+			],
+			"scale": [
+				2.59374070167542,
+				2.59374284744263,
+				2.59374284744263
+			]
+		},
+		{
+			"asset_id": "custom_teleoceras_aepysoma_gray_fossil_site_tn.",
+			"asset_path": "res://assets/environment/fossils_and_bones/megafauna/teleoceras_aepysoma_gray_fossil_site_tn..glb",
+			"instance_id": "CustomProp_custom_teleoceras_aepysoma_gray_fossil_site_tn__010",
+			"position": [
+				-724.74737548828091,
+				-1.87011468410492,
+				-1090.78649902344
+			],
+			"rotation": [
+				0,
+				0,
+				30.0000019073486
+			],
+			"scale": [
+				0.00129606132395566,
+				0.00129606132395566,
+				0.0012960626045242
+			]
+		},
+		{
+			"asset_id": "custom_ruined_stone_bridge_broken_arch",
+			"asset_path": "res://assets/architecture/infrastructure/roads_and_bridges/ruined_stone_bridge_broken_arch.glb",
+			"instance_id": "CustomProp_custom_ruined_stone_bridge_broken_arch_012",
+			"position": [
+				-1017.65838623046875,
+				-0.19026160240173,
+				-948.00164794921875
+			],
+			"rotation": [
+				0.00000200949125428,
+				-44.9999885559082,
+				0.00000486092039864
+			],
+			"scale": [
+				28.1024513244629,
+				28.1024532318115,
+				28.1024475097656
+			]
+		},
+		{
+			"asset_id": "custom_sky",
+			"asset_path": "res://assets/environment/sky_and_atmosphere/skyboxes/sky.glb",
+			"instance_id": "CustomProp_custom_sky_014",
+			"position": [
+				-1094.83178710938,
+				-0.89875376224518,
+				-1122.73547363281
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.00015064542822074,
+				0.00015064542822074,
+				0.00015064542822074
+			]
+		},
+		{
+			"asset_id": "custom_electric_pole",
+			"asset_path": "res://assets/architecture/infrastructure/utility_and_comms/electric_pole.glb",
+			"instance_id": "CustomProp_custom_electric_pole_021",
+			"position": [
+				-1083.63073730469,
+				-0.81124716997147,
+				-1135.96008300781
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.00241605401970446,
+				0.00241605401970446,
+				0.00241605401970446
+			]
+		},
+		{
+			"asset_id": "custom_electric_pole",
+			"asset_path": "res://assets/architecture/infrastructure/utility_and_comms/electric_pole.glb",
+			"instance_id": "CustomProp_custom_electric_pole_022",
+			"position": [
+				-1067.20495605469,
+				-0.78207606077194,
+				-1122.85656738281
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.00241605401970446,
+				0.00241605401970446,
+				0.00241605401970446
+			]
+		},
+		{
+			"asset_id": "custom_collapsed_gothic_chapel_ruin",
+			"asset_path": "res://assets/architecture/ruins_and_buildings/religious_and_gothic/collapsed_gothic_chapel_ruin.glb",
+			"instance_id": "CustomProp_custom_collapsed_gothic_chapel_ruin_023",
+			"position": [
+				-1169.1917724609375,
+				-0.61990118026733,
+				-794.9151611328125
+			],
+			"rotation": [
+				-0,
+				90,
+				0
+			],
+			"scale": [
+				28.2392845153809,
+				28.2392883300781,
+				28.2392845153809
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "CustomProp_custom_dry_realistic_grass_lods_1_025",
+			"position": [
+				-1038.75805664062,
+				-3.0816376209259,
+				-1123.20654296875
+			],
+			"rotation": [
+				0.00000022097293594,
+				-14.9999990463257,
+				0
+			],
+			"scale": [
+				0.999999821186066,
+				0.999999940395355,
+				0.999999821186066
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "CustomProp_custom_dry_realistic_grass_lods_1_003_Copy_Copy",
+			"position": [
+				-1043.50317382812,
+				-2.6537389755249,
+				-1168.12438964844
+			],
+			"rotation": [
+				0,
+				-59.9999961853027,
+				0
+			],
+			"scale": [
+				0.999999821186066,
+				1,
+				0.999999821186066
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "@Node3D@4818047",
+			"position": [
+				-1071.89733886719,
+				-3.56024026870728,
+				-1125.99230957031
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "CustomProp_custom_dry_realistic_grass_lods_1_025_Copy",
+			"position": [
+				-1048.44274902344,
+				-3.04065084457397,
+				-1134.78369140625
+			],
+			"rotation": [
+				0.00000022097293594,
+				-14.9999990463257,
+				0
+			],
+			"scale": [
+				0.999999821186066,
+				0.999999940395355,
+				0.999999821186066
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "@Node3D@4855904",
+			"position": [
+				-1028.65002441406,
+				-3.11046075820923,
+				-1109.38317871094
+			],
+			"rotation": [
+				0.00000022097283647,
+				-135,
+				0
+			],
+			"scale": [
+				0.999999284744263,
+				0.999999940395355,
+				0.999999284744263
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "CustomProp_custom_dry_realistic_grass_lods_1_025_Copy_Copy",
+			"position": [
+				-1046.13684082031,
+				-3.34520077705383,
+				-1111.08837890625
+			],
+			"rotation": [
+				0.00000022097283647,
+				-135,
+				0
+			],
+			"scale": [
+				0.999999284744263,
+				0.999999940395355,
+				0.999999284744263
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "@Node3D@4855937",
+			"position": [
+				-1045.65979003906,
+				-3.08151245117188,
+				-1152.83740234375
+			],
+			"rotation": [
+				0,
+				-120.000007629395,
+				0
+			],
+			"scale": [
+				0.999999403953552,
+				1,
+				0.999999403953552
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "_Node3D_4818047_Copy",
+			"position": [
+				-1071.31811523438,
+				-3.64214515686035,
+				-1130.57751464844
+			],
+			"rotation": [
+				0,
+				-120.000007629395,
+				0
+			],
+			"scale": [
+				0.999999403953552,
+				1,
+				0.999999403953552
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "@Node3D@4855970",
+			"position": [
+				-1038.451171875,
+				-2.75437808036804,
+				-1141.93408203125
+			],
+			"rotation": [
+				0,
+				180,
+				0
+			],
+			"scale": [
+				0.999999403953552,
+				1,
+				0.999999403953552
+			]
+		},
+		{
+			"asset_id": "custom_dry_realistic_grass_lods_1",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1.glb",
+			"instance_id": "CustomProp_custom_dry_realistic_grass_lods_1_003_Copy_Copy_Copy",
+			"position": [
+				-1030.60913085938,
+				-2.69217395782471,
+				-1149.1376953125
+			],
+			"rotation": [
+				0,
+				180,
+				0
+			],
+			"scale": [
+				0.999999403953552,
+				1,
+				0.999999403953552
+			]
+		},
+		{
+			"asset_id": "prop",
+			"instance_id": "Q01_MedievalRuin_7_Assets_8_Copy",
+			"position": [
+				-1110.94921875,
+				-1.58857429027557,
+				-964.22302246093795
+			],
+			"rotation": [
+				0,
+				-76.4340438842773,
+				0
+			],
+			"scale": [
+				6.2538104057312,
+				6.2538104057312,
+				6.2538104057312
+			]
+		},
+		{
+			"asset_id": "prop",
+			"instance_id": "ScrapNode_4_Copy",
+			"position": [
+				-973.834716796875,
+				0.990544259548187,
+				-954.90686035156205
+			],
+			"rotation": [
+				0,
+				-153.97065734863301,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"asset_id": "custom_wasteland_wagon_redux",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/wagons_and_carts/wasteland_wagon_redux.glb",
+			"instance_id": "CustomProp_custom_wasteland_wagon_redux_001",
+			"position": [
+				-1056.423828125,
+				-1.17631006240845,
+				-981.107666015625
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.00725952489301562,
+				0.00725952489301562,
+				0.00725952489301562
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "CustomProp_custom_shipping_container_002",
+			"position": [
+				-597.147216796875,
+				-2.15019226074219,
+				-1132.908447265625
+			],
+			"rotation": [
+				-0,
+				135,
+				30.0000076293945
+			],
+			"scale": [
+				0.228767782449722,
+				0.228767812252045,
+				0.228767782449722
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "CustomProp_custom_shipping_container_002_Copy",
+			"position": [
+				-621.72711181640625,
+				-1.62491679191589,
+				-1135.228271484375
+			],
+			"rotation": [
+				-0,
+				135,
+				-15.00000381469727
+			],
+			"scale": [
+				0.228767782449722,
+				0.228767812252045,
+				0.228767782449722
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "CustomProp_custom_shipping_container_002_Copy_Copy",
+			"position": [
+				-628.5577392578125,
+				1.46172106266022,
+				-1090.7232666015625
+			],
+			"rotation": [
+				-0,
+				120.000007629395,
+				0
+			],
+			"scale": [
+				0.228767782449722,
+				0.228767827153206,
+				0.228767782449722
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "CustomProp_custom_shipping_container_002_Copy_Copy_Copy",
+			"position": [
+				-603.317138671875,
+				-2.83037710189819,
+				-1091.45849609375
+			],
+			"rotation": [
+				-0,
+				135,
+				0
+			],
+			"scale": [
+				0.228767782449722,
+				0.228767827153206,
+				0.228767782449722
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "CustomProp_custom_shipping_container_003",
+			"position": [
+				-607.55853271484375,
+				-1.37175583839417,
+				-1052.421630859375
+			],
+			"rotation": [
+				-0,
+				-135.00001525878906,
+				0
+			],
+			"scale": [
+				0.205890908837318,
+				0.205891028046608,
+				0.205890968441963
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container_(1)",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container (1).glb",
+			"instance_id": "CustomProp_custom_shipping_container_(1)_004",
+			"position": [
+				-577.83984375,
+				-5.14173603057861,
+				-1158.06433105469
+			],
+			"rotation": [
+				0,
+				-14.9999923706055,
+				0
+			],
+			"scale": [
+				4.17724895477295,
+				4.17724895477295,
+				4.17724895477295
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "CustomProp_custom_shipping_container_003_Copy",
+			"position": [
+				-583.48260498046875,
+				-0.90457248687744,
+				-1066.8292236328125
+			],
+			"rotation": [
+				-0,
+				134.999984741211,
+				0
+			],
+			"scale": [
+				0.205890908837318,
+				0.205891028046608,
+				0.205890953540802
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "@Node3D@986132",
+			"position": [
+				-571.56262207031205,
+				-3.66987180709839,
+				-1140.40295410156
+			],
+			"rotation": [
+				0,
+				135,
+				0
+			],
+			"scale": [
+				0.205890849232674,
+				0.205891028046608,
+				0.205890849232674
+			]
+		},
+		{
+			"asset_id": "custom_shipping_container",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/shipping_container.glb",
+			"instance_id": "CustomProp_custom_shipping_container_003_Copy_Copy",
+			"position": [
+				-623.78381347656205,
+				-2.54892778396606,
+				-1166.56433105469
+			],
+			"rotation": [
+				0,
+				45,
+				0
+			],
+			"scale": [
+				0.205890849232674,
+				0.205891028046608,
+				0.205890893936157
+			]
+		},
+		{
+			"asset_id": "custom_satellite_dish",
+			"asset_path": "res://assets/architecture/infrastructure/utility_and_comms/satellite_dish.glb",
+			"instance_id": "CustomProp_custom_satellite_dish_005",
+			"position": [
+				-739.72222900390625,
+				-8.06913757324219,
+				-1097.8250732421875
+			],
+			"rotation": [
+				0.00000000000009528,
+				90,
+				-60.00000381469727
+			],
+			"scale": [
+				7.40025186538696,
+				7.40025186538696,
+				7.40025234222412
+			]
+		},
+		{
+			"asset_id": "custom_old_concrete_building_pack__lowpoly",
+			"asset_path": "res://assets/architecture/ruins_and_buildings/industrial_packs/old_concrete_building_pack__lowpoly.glb",
+			"instance_id": "CustomProp_custom_old_concrete_building_pack__lowpoly_007",
+			"position": [
+				-894.38818359375,
+				-3.84404277801514,
+				-1154.80627441406
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				6.11591100692749,
+				6.11591100692749,
+				6.11591100692749
+			]
+		},
+		{
+			"asset_id": "custom_old_concrete_building_pack__lowpoly",
+			"asset_path": "res://assets/architecture/ruins_and_buildings/industrial_packs/old_concrete_building_pack__lowpoly.glb",
+			"instance_id": "CustomProp_custom_old_concrete_building_pack__lowpoly_007_Copy",
+			"position": [
+				-755.41882324218795,
+				-4.42191982269287,
+				-995.28765869140614
+			],
+			"rotation": [
+				0,
+				90,
+				0
+			],
+			"scale": [
+				6.11590719223022,
+				6.11591100692749,
+				6.11590766906738
+			]
+		},
+		{
+			"asset_id": "custom_brutalist_sculpture",
+			"asset_path": "res://assets/architecture/landmarks/brutalist_monuments/brutalist_sculpture.glb",
+			"instance_id": "CustomProp_custom_brutalist_sculpture_002",
+			"position": [
+				-1003.28942871094,
+				-0.85170155763626,
+				-1041.521484375
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.0038461487274617,
+				0.0038461487274617,
+				0.0038461487274617
+			]
+		},
+		{
+			"asset_id": "custom_brutalist_sculpture",
+			"asset_path": "res://assets/architecture/landmarks/brutalist_monuments/brutalist_sculpture.glb",
+			"instance_id": "CustomProp_custom_brutalist_sculpture_003",
+			"position": [
+				-1002.58203125,
+				-0.83007442951202,
+				-1038.26806640625
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.0038461487274617,
+				0.0038461487274617,
+				0.0038461487274617
+			]
+		},
+		{
+			"asset_id": "custom_burned_sports_car_free_raw_scan",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/automobiles/burned_sports_car_free_raw_scan.glb",
+			"instance_id": "CustomProp_custom_burned_sports_car_free_raw_scan_004",
+			"position": [
+				-1050.99755859375,
+				-0.55386191606522,
+				-914.15734863281227
+			],
+			"rotation": [
+				-0,
+				0,
+				0
+			],
+			"scale": [
+				0.7289999127388,
+				0.7289999127388,
+				0.7289999127388
+			]
+		},
+		{
+			"asset_id": "custom_concrete_road_barrier_photoscanned",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/concrete_road_barrier_photoscanned.glb",
+			"instance_id": "CustomProp_custom_concrete_road_barrier_photoscanned_007",
+			"position": [
+				-597.77685546875,
+				-0.91756021976471,
+				-1068.06884765625
+			],
+			"rotation": [
+				0,
+				120.000007629395,
+				0
+			],
+			"scale": [
+				0.999999761581421,
+				1,
+				0.999999761581421
+			]
+		},
+		{
+			"asset_id": "custom_concreteroad",
+			"asset_path": "res://assets/architecture/infrastructure/roads_and_bridges/concreteroad.glb",
+			"instance_id": "CustomProp_custom_concreteroad_008",
+			"position": [
+				-645.04705810546875,
+				1.68735635280609,
+				-977.35821533203125
+			],
+			"rotation": [
+				0.00000000000023949,
+				45.0000076293945,
+				-180
+			],
+			"scale": [
+				28.1024436950684,
+				28.1024475097656,
+				28.1024494171143
+			]
+		},
+		{
+			"asset_id": "custom_concreteroad",
+			"asset_path": "res://assets/architecture/infrastructure/roads_and_bridges/concreteroad.glb",
+			"instance_id": "CustomProp_custom_concreteroad_008_Copy",
+			"position": [
+				-651.500244140625,
+				1.66358125209808,
+				-983.76953125
+			],
+			"rotation": [
+				0.00000000000023949,
+				45.0000076293945,
+				-180
+			],
+			"scale": [
+				28.1024436950684,
+				28.1024475097656,
+				28.1024494171143
+			]
+		},
+		{
+			"asset_id": "rock_5a",
+			"instance_id": "EditorProp_rock_5a_009",
+			"position": [
+				-980.57830810546898,
+				-1.30656266212463,
+				-880.42877197265602
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				2.35794806480408,
+				2.35794806480408,
+				2.35794806480408
+			]
+		},
+		{
+			"asset_id": "thinny_anomaly",
+			"instance_id": "EditorProp_thinny_anomaly_015",
+			"position": [
+				-984.68988037109386,
+				-0.4809485077858,
+				-857.32904052734398
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"asset_id": "supply_crate",
+			"instance_id": "EditorProp_supply_crate_016",
+			"position": [
+				-954.80303955078091,
+				-0.51855486631393,
+				-750.847412109375
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				2.85311722755432,
+				2.85311722755432,
+				2.85311722755432
+			]
+		},
+		{
+			"asset_id": "telegraph_pole",
+			"instance_id": "EditorProp_telegraph_pole_017",
+			"position": [
+				-958.57257080078091,
+				-1.0522164106369,
+				-740.37310791015602
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				3.64786219596863,
+				3.64786219596863,
+				3.64786219596863
+			]
+		},
+		{
+			"asset_id": "telegraph_pole",
+			"instance_id": "EditorProp_telegraph_pole_017_Copy",
+			"position": [
+				-917.68103027343795,
+				-1.47117125988007,
+				-845.61145019531205
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				3.64786219596863,
+				3.64786219596863,
+				3.64786219596863
+			]
+		},
+		{
+			"asset_id": "telegraph_pole",
+			"instance_id": "EditorProp_telegraph_pole_017_Copy_Copy",
+			"position": [
+				-1070.44250488281,
+				-1.22168159484863,
+				-863.45623779296898
+			],
+			"rotation": [
+				0,
+				-90,
+				0
+			],
+			"scale": [
+				3.64786219596863,
+				3.64786219596863,
+				3.64786219596863
+			]
+		},
+		{
+			"asset_id": "rock_5c",
+			"instance_id": "EditorProp_rock_5c_008",
+			"position": [
+				-1134.99243164062,
+				2.36339497566223,
+				-1168.98132324219
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				1,
+				1,
+				1
+			]
+		},
+		{
+			"asset_id": "custom_gleisabschnitt__wwii_railway_track",
+			"asset_path": "res://assets/architecture/infrastructure/railways/gleisabschnitt__wwii_railway_track.glb",
+			"instance_id": "CustomProp_custom_gleisabschnitt__wwii_railway_track_009",
+			"position": [
+				-959.39178466796875,
+				1.64984440803528,
+				-1020.42321777343761
+			],
+			"rotation": [
+				-0,
+				0,
+				0
+			],
+			"scale": [
+				3.45227193832397,
+				3.45227193832397,
+				3.45227193832397
+			]
+		},
+		{
+			"asset_id": "custom_gleisabschnitt__wwii_railway_track",
+			"asset_path": "res://assets/architecture/infrastructure/railways/gleisabschnitt__wwii_railway_track.glb",
+			"instance_id": "CustomProp_custom_gleisabschnitt__wwii_railway_track_009_Copy",
+			"position": [
+				-953.85736083984364,
+				1.50292229652405,
+				-977.1181640625
+			],
+			"rotation": [
+				-0,
+				0.00000197846179617,
+				0
+			],
+			"scale": [
+				3.45227193832397,
+				3.45227193832397,
+				3.45227193832397
+			]
+		},
+		{
+			"asset_id": "custom_gleisabschnitt__wwii_railway_track",
+			"asset_path": "res://assets/architecture/infrastructure/railways/gleisabschnitt__wwii_railway_track.glb",
+			"instance_id": "CustomProp_custom_gleisabschnitt__wwii_railway_track_009_Copy_Copy",
+			"position": [
+				-950.85626220703125,
+				1.26026880741119,
+				-952.624267578125
+			],
+			"rotation": [
+				-0,
+				-164.99996948242188,
+				0
+			],
+			"scale": [
+				3.45227241516113,
+				3.45227193832397,
+				3.45227241516113
+			]
+		},
+		{
+			"asset_id": "custom_gleisabschnitt__wwii_railway_track",
+			"asset_path": "res://assets/architecture/infrastructure/railways/gleisabschnitt__wwii_railway_track.glb",
+			"instance_id": "CustomProp_custom_gleisabschnitt__wwii_railway_track_009_Copy_Copy_Copy",
+			"position": [
+				-956.74932861328125,
+				1.44003057479858,
+				-997.42907714843761
+			],
+			"rotation": [
+				-0,
+				-164.99996948242188,
+				0
+			],
+			"scale": [
+				3.45227241516113,
+				3.45227193832397,
+				3.45227241516113
+			]
+		},
+		{
+			"asset_id": "custom_old_wooden_barn",
+			"asset_path": "res://assets/architecture/ruins_and_buildings/residential/old_wooden_barn.glb",
+			"instance_id": "CustomProp_custom_old_wooden_barn_035",
+			"position": [
+				-873.685791015625,
+				-4.45362138748169,
+				-1108.16369628906
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				3.45227193832397,
+				3.45227193832397,
+				3.45227193832397
+			]
+		},
+		{
+			"asset_id": "custom_old_cart_wheel",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/wagons_and_carts/old_cart_wheel.glb",
+			"instance_id": "CustomProp_custom_old_cart_wheel_036",
+			"position": [
+				-1129.28259277344,
+				2.13168668746948,
+				-1158.46435546875
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				0.012662042863667,
+				0.012662042863667,
+				0.012662042863667
+			]
+		},
+		{
+			"asset_id": "custom_rusted_mining_cart",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/industrial_carts/rusted_mining_cart.glb",
+			"instance_id": "CustomProp_custom_rusted_mining_cart_037",
+			"position": [
+				-960.82513427734364,
+				-1.7909380197525,
+				-1085.4622802734375
+			],
+			"rotation": [
+				-0,
+				0,
+				0
+			],
+			"scale": [
+				3.97252225875854,
+				3.97252225875854,
+				3.97252225875854
+			]
+		},
+		{
+			"asset_id": "custom_stagecoach",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/wagons_and_carts/stagecoach.glb",
+			"instance_id": "CustomProp_custom_stagecoach_038",
+			"position": [
+				-920.16473388671909,
+				-1.74727809429169,
+				-1105.57336425781
+			],
+			"rotation": [
+				0,
+				0,
+				-30.0000019073486
+			],
+			"scale": [
+				0.999999463558197,
+				0.999999463558197,
+				1
+			]
+		},
+		{
+			"asset_id": "custom_wooden_medieval_cart",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/wagons_and_carts/wooden_medieval_cart.glb",
+			"instance_id": "CustomProp_custom_wooden_medieval_cart_039",
+			"position": [
+				-1101.052001953125,
+				0.930224776268005,
+				-1030.2608642578125
+			],
+			"rotation": [
+				-0,
+				0,
+				0
+			],
+			"scale": [
+				2.14358901977539,
+				2.14358901977539,
+				2.14358901977539
+			]
+		},
+		{
+			"asset_id": "rock_2",
+			"instance_id": "EditorProp_rock_2_042",
+			"position": [
+				-1014.71551513671875,
+				16.9867706298828,
+				-1017.87341308593761
+			],
+			"rotation": [
+				-0,
+				179.999984741211,
+				0
+			],
+			"scale": [
+				11.9181814193726,
+				11.9181814193726,
+				11.9181814193726
+			]
+		},
+		{
+			"asset_id": "telegraph_pole",
+			"instance_id": "EditorProp_telegraph_pole_043",
+			"position": [
+				-951.799560546875,
+				0.464352041482925,
+				-1171.18725585938
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				3.79749917984009,
+				3.79749917984009,
+				3.79749917984009
+			]
+		},
+		{
+			"asset_id": "telegraph_pole",
+			"instance_id": "EditorProp_telegraph_pole_044",
+			"position": [
+				-946.50549316406205,
+				-0.90354442596436,
+				-1014.60595703125
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				3.04521417617798,
+				3.04521417617798,
+				3.04521417617798
+			]
+		},
+		{
+			"asset_id": "custom_heavily_rusted_yellow_safety_bollard_scan",
+			"asset_path": "res://assets/architecture/infrastructure/utility_and_comms/heavily_rusted_yellow_safety_bollard_scan.glb",
+			"instance_id": "CustomProp_custom_heavily_rusted_yellow_safety_bollard_scan_047",
+			"position": [
+				-991.00769042968795,
+				-0.03010480478406,
+				-1163.23010253906
+			],
+			"rotation": [
+				0,
+				60.0000114440918,
+				0
+			],
+			"scale": [
+				8.14027404785156,
+				8.14027786254883,
+				8.14027404785156
+			]
+		},
+		{
+			"asset_id": "custom_container_scene",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/Container Scene.glb",
+			"instance_id": "CustomProp_custom_container_scene_072",
+			"position": [
+				-640.52770996093795,
+				0.453443974256516,
+				-1162.34606933594
+			],
+			"rotation": [
+				0,
+				0,
+				0
+			],
+			"scale": [
+				3.79749917984009,
+				3.79749917984009,
+				3.79749917984009
+			]
+		},
+		{
+			"asset_id": "custom_container_scene",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/Container Scene.glb",
+			"instance_id": "CustomProp_custom_container_scene_073",
+			"position": [
+				-656.97863769531205,
+				-0.72700989246368,
+				-1084.80090332031
+			],
+			"rotation": [
+				0,
+				-164.99998474121099,
+				0
+			],
+			"scale": [
+				4.17724800109863,
+				4.17724895477295,
+				4.17724800109863
+			]
+		},
+		{
+			"asset_id": "custom_container_scene",
+			"asset_path": "res://assets/environment/vehicles_and_wreckage/shipping_containers/Container Scene.glb",
+			"instance_id": "CustomProp_custom_container_scene_074",
+			"position": [
+				-646.72814941406205,
+				-1.32475054264069,
+				-1063.59228515625
+			],
+			"rotation": [
+				0,
+				-90,
+				0
+			],
+			"scale": [
+				4.13547420501709,
+				4.13547658920288,
+				4.13547420501709
+			]
+		},
+		{
+			"asset_id": "custom_free_tubes_gameready",
+			"asset_path": "res://assets/architecture/infrastructure/pipelines_and_tubes/free_tubes_gameready.glb",
+			"instance_id": "CustomProp_custom_free_tubes_gameready_076_Copy",
+			"position": [
+				-592.93115234375,
+				-2.24794983863831,
+				-1183.099365234375
+			],
+			"rotation": [
+				0.00000030446003052,
+				74.9999923706055,
+				15.0000038146973
+			],
+			"scale": [
+				23.2251625061035,
+				23.2251663208008,
+				23.2251625061035
+			]
+		},
+		{
+			"asset_id": "custom_free_tubes_gameready",
+			"asset_path": "res://assets/architecture/infrastructure/pipelines_and_tubes/free_tubes_gameready.glb",
+			"instance_id": "CustomProp_custom_free_tubes_gameready_076_Copy_Copy",
+			"position": [
+				-672.639892578125,
+				-2.74477577209473,
+				-1126.1986083984375
+			],
+			"rotation": [
+				-0,
+				164.999984741211,
+				0
+			],
+			"scale": [
+				23.2251586914062,
+				23.2251663208008,
+				23.2251586914062
+			]
+		},
+		{
+			"asset_id": "custom_free_tubes_gameready",
+			"asset_path": "res://assets/architecture/infrastructure/pipelines_and_tubes/free_tubes_gameready.glb",
+			"instance_id": "CustomProp_custom_free_tubes_gameready_076_Copy_Copy_Copy",
+			"position": [
+				-617.48205566406205,
+				-2.77263212203979,
+				-1028.87231445312
+			],
+			"rotation": [
+				0,
+				-104.999992370605,
+				0
+			],
+			"scale": [
+				23.2251586914062,
+				23.2251663208008,
+				23.2251586914062
+			]
+		},
+		{
+			"asset_id": "custom_flatfloor",
+			"asset_path": "res://assets/custom_props/flatfloor.glb",
+			"instance_id": "CustomProp_custom_flatfloor_025",
+			"position": [
+				-681.973876953125,
+				2.54118347167969,
+				-1000.25958251953125
+			],
+			"rotation": [
+				-0,
+				-75.00000762939453,
+				0
+			],
+			"scale": [
+				16.5942153930664,
+				16.594217300415,
+				16.5942153930664
+			]
+		},
+		{
+			"asset_id": "custom_flatfloor",
+			"asset_path": "res://assets/custom_props/flatfloor.glb",
+			"instance_id": "CustomProp_custom_flatfloor_026",
+			"position": [
+				-1020.63555908203125,
+				2.42636251449585,
+				-928.87487792968773
+			],
+			"rotation": [
+				-0,
+				105,
+				0
+			],
+			"scale": [
+				17.449405670166,
+				17.4494094848633,
+				17.449405670166
+			]
+		},
+		{
+			"asset_id": "custom_dry_tree_vurvur_house_5",
+			"asset_path": "res://assets/environment/foliage/dead_trees_and_cacti/dry_tree_vurvur_house_5.glb",
+			"instance_id": "CustomProp_custom_dry_tree_vurvur_house_5_062",
+			"position": [
+				-768.2880859375,
+				-0.69960117340088,
+				-1200.1298828125
+			],
+			"rotation": [
+				-0,
+				-30.00000190734863,
+				0
+			],
+			"scale": [
+				5.05447149276733,
+				5.05447149276733,
+				5.05447149276733
+			]
+		},
+		{
+			"asset_id": "custom_grass_patches",
+			"asset_path": "res://assets/environment/foliage/grasses_and_shrubs/grass_patches.glb",
+			"instance_id": "CustomProp_custom_grass_patches_066",
+			"position": [
+				-769.51666259765636,
+				-0.2784232199192,
+				-1208.276123046875
+			],
+			"rotation": [
+				-0,
+				0,
+				0
+			],
+			"scale": [
+				0.00477452902123332,
+				0.00477452902123332,
+				0.00477452902123332
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "CustomProp_custom_wallbarriers_073",
+			"position": [
+				-804.13525390625,
+				-0.98154598474503,
+				-1241.240234375
+			],
+			"rotation": [
+				-0,
+				0,
+				0
+			],
+			"scale": [
+				28.1024532318115,
+				28.1024532318115,
+				28.1024532318115
+			]
+		},
+		{
+			"asset_id": "custom_wallbarriers",
+			"asset_path": "res://assets/architecture/modular_walls_and_barriers/fortifications/wallbarriers.glb",
+			"instance_id": "CustomProp_custom_wallbarriers_025",
+			"position": [
+				-1238.364013671875,
+				0.737437963485718,
+				-937.65124511718773
+			],
+			"rotation": [
+				-0,
+				90,
+				0
+			],
+			"scale": [
+				21.1137771606445,
+				21.1137866973877,
+				21.1137771606445
+			]
+		}
+	],
+	"timestamp": "2026-11-08 20:25:33",
+	"version": "1.0.0"
+}

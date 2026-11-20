@@ -1,0 +1,37 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://yuyjhsujv3u0"
+path="res://.godot/imported/medieval_wall_of_bricks_assets_0.png-675a307e820cb50ef5afbe9ee1dbaefe.ctex"
+metadata={
+"vram_texture": false
+}
+generator_parameters={
+"md5": "3341ea0fd7754d8071e7569e14a83576"
+}
+
+[deps]
+
+source_file="res://assets/architecture/modular_walls_and_barriers/masonry/medieval_wall_of_bricks_assets_0.png"
+dest_files=["res://.godot/imported/medieval_wall_of_bricks_assets_0.png-675a307e820cb50ef5afbe9ee1dbaefe.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1

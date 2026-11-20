@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://waystation_sanctuary_node0"]
+
+[ext_resource type="Script" path="res://world/waystation_sanctuary.gd" id="1_waystation"]
+[ext_resource type="PackedScene" uid="uid://bunker_model_asset_001" path="res://assets/architecture/landmarks/waystation_bunker/bunker.glb" id="2_bunker_mesh"]
+
+[node name="WaystationSanctuary" type="Node3D" groups=["safe_house", "sanctuary"]]
+script = ExtResource("1_waystation")
+
+[node name="BunkerStructure" type="Node3D" parent="."]
+
+[node name="CustomBunkerModel" parent="BunkerStructure" instance=ExtResource("2_bunker_mesh")]
+transform = Transform3D(19.799, 0, 19.799, 0, 26, 0, -19.799, 0, 19.799, 0, 0, 0)
+

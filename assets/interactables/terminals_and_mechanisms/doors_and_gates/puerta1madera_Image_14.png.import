@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://dti5yfhjnrc8h"
+path.s3tc="res://.godot/imported/puerta1madera_Image_14.png-4fc270e2da73559215b5421199bf938b.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "1ff5c34df1e9f8a6842ee2fb496ebd86"
+}
+
+[deps]
+
+source_file="res://assets/interactables/terminals_and_mechanisms/doors_and_gates/puerta1madera_Image_14.png"
+dest_files=["res://.godot/imported/puerta1madera_Image_14.png-4fc270e2da73559215b5421199bf938b.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=1
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=1
+roughness/src_normal="res://assets/interactables/terminals_and_mechanisms/doors_and_gates/puerta1madera_Image_14.png"
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

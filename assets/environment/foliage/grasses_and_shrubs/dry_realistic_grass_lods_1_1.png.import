@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://d4j0b4liqikcl"
+path.s3tc="res://.godot/imported/dry_realistic_grass_lods_1_1.png-461bb5d55f2d04faa42a27e72355da90.s3tc.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "cdf90d7cd892ed877979cb42de7a5182"
+}
+
+[deps]
+
+source_file="res://assets/environment/foliage/grasses_and_shrubs/dry_realistic_grass_lods_1_1.png"
+dest_files=["res://.godot/imported/dry_realistic_grass_lods_1_1.png-461bb5d55f2d04faa42a27e72355da90.s3tc.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

@@ -91,3 +91,4 @@ export class EventBus {
 
 // Global shared singleton instance
 export const globalEventBus = new EventBus();
+

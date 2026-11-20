@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://loot_drop.gd" id="1_loot"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pickup"]
+radius = 1.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_carton"]
+albedo_color = Color(0.76, 0.58, 0.28, 1)
+metallic = 0.45
+roughness = 0.55
+
+[sub_resource type="BoxMesh" id="BoxMesh_loot"]
+material = SubResource("StandardMaterial3D_carton")
+size = Vector3(0.24, 0.14, 0.16)
+
+[node name="LootDrop" type="Area3D"]
+script = ExtResource("1_loot")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
+shape = SubResource("SphereShape3D_pickup")
+
+[node name="Visuals" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Visuals"]
+mesh = SubResource("BoxMesh_loot")
+

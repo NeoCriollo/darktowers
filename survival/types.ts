@@ -50,3 +50,4 @@ export interface MountState {
   rightSaddlebagId: string;
   scabbardId: string;
 }
+

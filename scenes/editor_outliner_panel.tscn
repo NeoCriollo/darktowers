@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://editor_outliner_panel_001"]
+
+[ext_resource type="Script" path="res://ui/editor_outliner_panel.gd" id="1_outliner"]
+
+[node name="EditorOutlinerPanel" type="CanvasLayer"]
+layer = 104
+script = ExtResource("1_outliner")
+

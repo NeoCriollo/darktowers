@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://editor_asset_catalog_001"]
+
+[ext_resource type="Script" path="res://ui/editor_asset_catalog.gd" id="1_catalog"]
+
+[node name="EditorAssetCatalog" type="CanvasLayer"]
+layer = 105
+script = ExtResource("1_catalog")
+

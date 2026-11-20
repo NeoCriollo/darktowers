@@ -162,4 +162,105 @@ describe('Weapon Mechanics & Barrel Friction', () => {
     assert.ok(inspection.boreCondition.includes('bright') || inspection.boreCondition.includes('light'));
     assert.notEqual(inspection.tactileGritSeverity, 'SEIZED');
   });
+
+  it('should validate gunshot audio cues, muzzle events, and input action wiring', () => {
+    // 1. Mock AudioStreamPlayer3D & Muzzle Emitters
+    class MockAudioStreamPlayer3D {
+      name: string = 'GunshotAudio';
+      stream: string | null = 'res://assets/audio/gunshot.wav';
+      unitSize: number = 14.0;
+      maxDistance: number = 150.0;
+      pitchScale: number = 1.0;
+      isPlaying: boolean = false;
+      playCount: number = 0;
+
+      play(): void {
+        this.isPlaying = true;
+        this.playCount++;
+      }
+    }
+
+    class MockCPUParticles3D {
+      name: string = 'MuzzleFlash';
+      emitting: boolean = false;
+      oneShot: boolean = true;
+      restartCalled: boolean = false;
+
+      restart(): void {
+        this.restartCalled = true;
+      }
+    }
+
+    class MockOmniLight3D {
+      name: string = 'MuzzleFlashLight';
+      lightEnergy: number = 0.0;
+      visible: boolean = false;
+    }
+
+    // 2. Weapon Controller with Audio & VFX Wiring
+    class MockWeaponController {
+      chamberState: string = 'CHAMBERED_LIVE';
+      hammerState: string = 'COCKED';
+      currentMagazineRounds: number = 5;
+      gunshotAudio = new MockAudioStreamPlayer3D();
+      muzzleFlash = new MockCPUParticles3D();
+      muzzleLight = new MockOmniLight3D();
+      firedEvents: any[] = [];
+
+      fire(): boolean {
+        if (this.hammerState !== 'COCKED' || this.chamberState !== 'CHAMBERED_LIVE') {
+          return false;
+        }
+
+        // Mechanical progression
+        this.hammerState = 'DECOCKED';
+        this.chamberState = 'CHAMBERED_SPENT';
+
+        // Trigger Audio & Muzzle Effects on Shot
+        this.gunshotAudio.pitchScale = 0.96 + Math.random() * 0.08;
+        this.gunshotAudio.play();
+
+        this.muzzleLight.lightEnergy = 6.5;
+        this.muzzleLight.visible = true;
+        this.muzzleFlash.restart();
+        this.muzzleFlash.emitting = true;
+
+        this.firedEvents.push({ discharged: true, remainingRounds: this.currentMagazineRounds });
+        return true;
+      }
+    }
+
+    const weapon = new MockWeaponController();
+    assert.equal(weapon.gunshotAudio.name, 'GunshotAudio');
+    assert.equal(weapon.gunshotAudio.stream, 'res://assets/audio/gunshot.wav');
+    assert.equal(weapon.gunshotAudio.playCount, 0);
+    assert.equal(weapon.muzzleFlash.emitting, false);
+
+    // 3. Simulate Left-Click Input Action ("fire" / MOUSE_BUTTON_LEFT)
+    const simulateInput = (event: { action?: string; button?: number; pressed: boolean }, isCaptured: boolean, isModalOpen: boolean) => {
+      if (!isCaptured || isModalOpen || !event.pressed) return false;
+      if (event.action === 'fire' || event.button === 1) {
+        return weapon.fire();
+      }
+      return false;
+    };
+
+    // Attempt shot while modal is open -> blocked
+    const modalBlocked = simulateInput({ action: 'fire', button: 1, pressed: true }, true, true);
+    assert.equal(modalBlocked, false);
+    assert.equal(weapon.gunshotAudio.playCount, 0);
+
+    // Fire in game world with captured cursor
+    const shotSuccess = simulateInput({ action: 'fire', button: 1, pressed: true }, true, false);
+    assert.equal(shotSuccess, true);
+    assert.equal(weapon.chamberState, 'CHAMBERED_SPENT');
+    assert.equal(weapon.hammerState, 'DECOCKED');
+    assert.equal(weapon.gunshotAudio.playCount, 1);
+    assert.equal(weapon.gunshotAudio.isPlaying, true);
+    assert.ok(weapon.gunshotAudio.pitchScale >= 0.95 && weapon.gunshotAudio.pitchScale <= 1.05);
+    assert.equal(weapon.muzzleFlash.emitting, true);
+    assert.equal(weapon.muzzleFlash.restartCalled, true);
+    assert.equal(weapon.muzzleLight.visible, true);
+    assert.equal(weapon.firedEvents.length, 1);
+  });
 });

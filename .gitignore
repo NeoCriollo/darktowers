@@ -2,3 +2,9 @@ node_modules/
 .DS_Store
 *.log
 dist/
+.godot/
+performance_diag_log.json
+.antigravity/
+Screenshot*.png
+Screenshot*.png.import
+
